@@ -1,0 +1,513 @@
+.
+├── README.md
+├── ai_default.yml
+├── data
+│   ├── plots
+│   │   ├── deltas
+│   │   │   ├── averaged_final_spectrum_pure_ssm_1_layer.png
+│   │   │   ├── averaged_final_spectrum_pure_ssm_2_layer.png
+│   │   │   ├── averaged_final_spectrum_pure_ssm_4_layer.png
+│   │   │   ├── averaged_svd_evolution_pure_ssm_1_layer.png
+│   │   │   ├── averaged_svd_evolution_pure_ssm_2_layer.png
+│   │   │   ├── averaged_svd_evolution_pure_ssm_4_layer.png
+│   │   │   ├── heatmap_federated_pure_ssm_1_layer_lu_1_seed_0_server.png
+│   │   │   ├── heatmap_federated_pure_ssm_1_layer_lu_1_seed_1_server.png
+│   │   │   ├── heatmap_federated_pure_ssm_1_layer_lu_1_seed_2_server.png
+│   │   │   ├── heatmap_federated_pure_ssm_1_layer_lu_8_seed_0_server.png
+│   │   │   ├── heatmap_federated_pure_ssm_1_layer_lu_8_seed_1_server.png
+│   │   │   ├── heatmap_federated_pure_ssm_1_layer_lu_8_seed_2_server.png
+│   │   │   ├── heatmap_federated_pure_ssm_2_layer_lu_1_seed_0_server.png
+│   │   │   ├── heatmap_federated_pure_ssm_2_layer_lu_1_seed_1_server.png
+│   │   │   ├── heatmap_federated_pure_ssm_2_layer_lu_1_seed_2_server.png
+│   │   │   ├── heatmap_federated_pure_ssm_2_layer_lu_8_seed_0_server.png
+│   │   │   ├── heatmap_federated_pure_ssm_2_layer_lu_8_seed_1_server.png
+│   │   │   ├── heatmap_federated_pure_ssm_2_layer_lu_8_seed_2_server.png
+│   │   │   ├── heatmap_federated_pure_ssm_4_layer_lu_1_seed_0_server.png
+│   │   │   ├── heatmap_federated_pure_ssm_4_layer_lu_1_seed_1_server.png
+│   │   │   ├── heatmap_federated_pure_ssm_4_layer_lu_1_seed_2_server.png
+│   │   │   ├── heatmap_structure_central_config_pure_ssm_1_layer_seed_0.png
+│   │   │   ├── heatmap_structure_central_config_pure_ssm_1_layer_seed_1.png
+│   │   │   ├── heatmap_structure_central_config_pure_ssm_1_layer_seed_2.png
+│   │   │   ├── heatmap_structure_central_config_pure_ssm_2_layer_seed_0.png
+│   │   │   ├── heatmap_structure_central_config_pure_ssm_2_layer_seed_1.png
+│   │   │   ├── heatmap_structure_central_config_pure_ssm_2_layer_seed_2.png
+│   │   │   ├── heatmap_structure_central_config_pure_ssm_4_layer_seed_0.png
+│   │   │   ├── heatmap_structure_central_config_pure_ssm_4_layer_seed_1.png
+│   │   │   ├── heatmap_structure_central_config_pure_ssm_4_layer_seed_2.png
+│   │   │   ├── svd_evolution_federated_pure_ssm_1_layer_lu_1.png
+│   │   │   ├── svd_evolution_federated_pure_ssm_1_layer_lu_8.png
+│   │   │   ├── svd_evolution_federated_pure_ssm_2_layer_lu_1.png
+│   │   │   ├── svd_evolution_federated_pure_ssm_2_layer_lu_8.png
+│   │   │   ├── svd_evolution_federated_pure_ssm_4_layer_lu_1.png
+│   │   │   ├── svd_spectrum_federated_pure_ssm_1_layer_lu_1.png
+│   │   │   ├── svd_spectrum_federated_pure_ssm_1_layer_lu_8.png
+│   │   │   ├── svd_spectrum_federated_pure_ssm_2_layer_lu_1.png
+│   │   │   ├── svd_spectrum_federated_pure_ssm_2_layer_lu_8.png
+│   │   │   └── svd_spectrum_federated_pure_ssm_4_layer_lu_1.png
+│   │   └── perplexities
+│   │       ├── 1_central_vs_fed_pure_ssm_1_layer.png
+│   │       ├── 1_central_vs_fed_pure_ssm_2_layer.png
+│   │       ├── 1_central_vs_fed_pure_ssm_4_layer.png
+│   │       ├── 2_lu_comparison_pure_ssm_1_layer.png
+│   │       ├── 2_lu_comparison_pure_ssm_2_layer.png
+│   │       ├── 2_lu_comparison_pure_ssm_4_layer.png
+│   │       ├── 3_method_comparison_pure_ssm_1_layer.png
+│   │       └── 4_multi_config_comparison.png
+│   └── results
+│       ├── central_config_pure_ssm_1_layer_seed_0
+│       │   ├── deltas
+│       │   ├── params
+│       │   └── training_history.json
+│       ├── central_config_pure_ssm_1_layer_seed_1
+│       │   ├── deltas
+│       │   ├── params
+│       │   └── training_history.json
+│       ├── central_config_pure_ssm_1_layer_seed_2
+│       │   ├── deltas
+│       │   ├── params
+│       │   └── training_history.json
+│       ├── central_config_pure_ssm_2_layer_seed_0
+│       │   ├── deltas
+│       │   ├── params
+│       │   └── training_history.json
+│       ├── central_config_pure_ssm_2_layer_seed_1
+│       │   ├── deltas
+│       │   ├── params
+│       │   └── training_history.json
+│       ├── central_config_pure_ssm_2_layer_seed_2
+│       │   ├── deltas
+│       │   ├── params
+│       │   └── training_history.json
+│       ├── central_config_pure_ssm_4_layer_seed_0
+│       │   ├── deltas
+│       │   ├── params
+│       │   └── training_history.json
+│       ├── central_config_pure_ssm_4_layer_seed_1
+│       │   ├── deltas
+│       │   ├── params
+│       │   └── training_history.json
+│       ├── central_config_pure_ssm_4_layer_seed_2
+│       │   ├── deltas
+│       │   ├── params
+│       │   └── training_history.json
+│       ├── fed_entropy_config_pure_ssm_1_layer_lu_10_seed_42
+│       │   └── server
+│       │       └── params
+│       │           ├── step_000001.npz
+│       │           ├── step_000010.npz
+│       │           └── step_000020.npz
+│       ├── fed_entropy_config_pure_ssm_1_layer_lu_1_seed_0
+│       │   ├── server
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── fed_entropy_config_pure_ssm_1_layer_lu_1_seed_1
+│       │   ├── server
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── fed_entropy_config_pure_ssm_1_layer_lu_1_seed_2
+│       │   ├── server
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── fed_fisher_config_pure_ssm_1_layer_lu_10_seed_42
+│       │   └── server
+│       │       ├── deltas
+│       │       └── params
+│       │           ├── step_000001.npz
+│       │           └── step_000050.npz
+│       ├── fed_fisher_config_pure_ssm_1_layer_lu_1_seed_0
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── fed_fisher_config_pure_ssm_1_layer_lu_1_seed_1
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── fed_fisher_config_pure_ssm_1_layer_lu_1_seed_2
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── fed_momentum_config_pure_ssm_1_layer_lu_10_seed_42
+│       │   └── server
+│       │       └── params
+│       │           ├── step_000001.npz
+│       │           ├── step_000010.npz
+│       │           ├── step_000020.npz
+│       │           ├── step_000030.npz
+│       │           └── step_000040.npz
+│       ├── fed_momentum_config_pure_ssm_1_layer_lu_1_seed_0
+│       │   ├── server
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── fed_momentum_config_pure_ssm_1_layer_lu_1_seed_1
+│       │   ├── server
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── fed_momentum_config_pure_ssm_1_layer_lu_1_seed_2
+│       │   ├── server
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── federated_config_pure_ssm_1_layer_lu_10_seed_42
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   │   ├── step_000001.npz
+│       │   │   │   └── step_000050.npz
+│       │   │   └── params
+│       │   │       ├── step_000001.npz
+│       │   │       └── step_000050.npz
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   │   ├── step_000001.npz
+│       │   │   │   └── step_000050.npz
+│       │   │   └── params
+│       │   │       ├── step_000001.npz
+│       │   │       └── step_000050.npz
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   │   ├── step_000001.npz
+│       │   │   │   └── step_000050.npz
+│       │   │   └── params
+│       │   │       ├── step_000001.npz
+│       │   │       └── step_000050.npz
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   │   ├── step_000001.npz
+│       │   │   │   └── step_000050.npz
+│       │   │   └── params
+│       │   │       ├── step_000001.npz
+│       │   │       └── step_000050.npz
+│       │   └── server
+│       │       ├── deltas
+│       │       │   ├── step_000001.npz
+│       │       │   └── step_000050.npz
+│       │       └── params
+│       │           ├── step_000000.npz
+│       │           ├── step_000001.npz
+│       │           └── step_000050.npz
+│       ├── federated_config_pure_ssm_1_layer_lu_1_seed_0
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   │       └── step_000000.npz
+│       │   └── training_history.json
+│       ├── federated_config_pure_ssm_1_layer_lu_1_seed_1
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── federated_config_pure_ssm_1_layer_lu_1_seed_2
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── federated_config_pure_ssm_1_layer_lu_8_seed_0
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── federated_config_pure_ssm_1_layer_lu_8_seed_1
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── federated_config_pure_ssm_1_layer_lu_8_seed_2
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── federated_config_pure_ssm_2_layer_lu_1_seed_0
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── federated_config_pure_ssm_2_layer_lu_1_seed_1
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── federated_config_pure_ssm_2_layer_lu_1_seed_2
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── federated_config_pure_ssm_2_layer_lu_8_seed_0
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── federated_config_pure_ssm_2_layer_lu_8_seed_1
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── federated_config_pure_ssm_2_layer_lu_8_seed_2
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── federated_config_pure_ssm_4_layer_lu_1_seed_0
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── federated_config_pure_ssm_4_layer_lu_1_seed_1
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── federated_config_pure_ssm_4_layer_lu_1_seed_2
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── server
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── training_history.json
+│       ├── federated_config_pure_ssm_4_layer_lu_8_seed_0
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── server
+│       │       ├── deltas
+│       │       └── params
+│       ├── federated_config_pure_ssm_4_layer_lu_8_seed_1
+│       │   ├── client_0
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_1
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_2
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   ├── client_3
+│       │   │   ├── deltas
+│       │   │   └── params
+│       │   └── server
+│       │       ├── deltas
+│       │       └── params
+│       └── federated_config_pure_ssm_4_layer_lu_8_seed_2
+│           ├── client_0
+│           │   ├── deltas
+│           │   └── params
+│           ├── client_1
+│           │   ├── deltas
+│           │   └── params
+│           ├── client_2
+│           │   ├── deltas
+│           │   └── params
+│           ├── client_3
+│           │   ├── deltas
+│           │   └── params
+│           ├── server
+│           │   ├── deltas
+│           │   └── params
+│           └── training_history.json
+├── experiment
+│   ├── __pycache__
+│   │   ├── fed_core.cpython-312.pyc
+│   │   ├── ssm_config.cpython-312.pyc
+│   │   └── utils.cpython-312.pyc
+│   ├── central.py
+│   ├── fed_avg.py
+│   ├── fed_core.py
+│   ├── fed_entropy.py
+│   ├── fed_fisher.py
+│   ├── fed_momentum.py
+│   ├── ssm_config.py
+│   └── utils.py
+├── plot
+│   ├── plot_perplexities.py
+│   ├── visualize_deltas.py
+│   └── visualize_federated_deltas.py
+└── tree.txt
+
+380 directories, 131 files
