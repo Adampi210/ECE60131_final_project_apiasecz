@@ -222,3 +222,11 @@ The flags for this script are:
 - ```heatmap_*.png```: Heatmaps of parameter updates for specific federated runs.
 - ```svd_evolution_*.png```: Evolution of singular values for the aggregated global model.
 - ```svd_spectrum_*.png```: Final singular value spectrum for federated methods.
+
+## 6. References
+* **Mamba Architecture:** Gu, A., & Dao, T. (2023). *Mamba: Linear-Time Sequence Modeling with Selective State Spaces*. arXiv preprint arXiv:2312.00752.
+* **Federated Averaging (FedAvg):** McMahan, B., Moore, E., Ramage, D., Hampson, S., & y Arcas, B. A. (2017). *Communication-Efficient Learning of Deep Networks from Decentralized Data*. AISTATS.
+* **Dataset:** Merity, S., Xiong, C., Bradbury, J., & Socher, R. (2016). *Pointer Sentinel Mixture Models* (WikiText-2). ICLR.
+
+## 7. Author
+**Project Author:** Adam Piaseczny
