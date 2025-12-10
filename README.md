@@ -74,7 +74,7 @@ All training scripts are located in the experiment/ directory. Make sure to cd i
 cd experiment
 ```
 
-A. **Centralized Baseline**
+### A. **Centralized Baseline**
 
 Run the centralized training as a baseline for training performance.
 
@@ -100,7 +100,7 @@ The following flags can be adjusted when running the centralized training script
 ```--data_dir```: Directory where experiment results and logs will be saved (default: ../data/results/).
 ```--cache_dir```: Directory to cache the downloaded WikiText-2 dataset and tokenizer files (default: ../../cache/wikitext-2).
 
-B. **Standard Federated Averaging (FedAvg)**
+### B. **Standard Federated Averaging (FedAvg)**
 
 Run the baseline federated learning algorithm. 
 ```bash
@@ -130,7 +130,7 @@ The following flags can be adjusted when running the FedAvg training script:
 
 ```--cache_dir```: Directory to cache the downloaded WikiText-2 dataset and tokenizer files (default: ../../cache/wikitext2).
 
-C. **Federated Learning with Momentum (FedMomentum)**
+### C. **Federated Learning with Momentum (FedMomentum)**
 
 Uses server-side momentum to stabilize the global model updates:
 ```bash
@@ -142,7 +142,7 @@ The script has the same flags as fed_avg.py, with additional flags:
 
 ```--server_lr```: Step size for server update with Momentum (default: 1.0).
 
-D. **Federated Learning with Entropy Weighting (FedEntropy)**
+### D. **Federated Learning with Entropy Weighting (FedEntropy)**
 
 Aggregates weights based on the confidence (entropy) of the client's model on validation data:
 ```bash
@@ -152,7 +152,7 @@ The script has the same flags as fed_avg.py, with an additional flag:
 
 ```--temperature```: Temperature parameter for entropy scaling (default: 1.0).
 
-E. **Federated Learning with Fisher Information Weighting (FedFisher)**
+### E. **Federated Learning with Fisher Information Weighting (FedFisher)**
 
 Computes the diagonal Fisher Information Matrix to weight parameters based on their importance during aggregation:
 ```bash
