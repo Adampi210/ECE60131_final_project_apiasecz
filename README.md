@@ -1,4 +1,4 @@
-# ECE60131_final_project_apiasecz
+# ECE60131 Final Project: Federated Learning for Selective State-Space Models
 
 ## Environment Setup (Conda)
 To execute the code, first prepare the environment. 

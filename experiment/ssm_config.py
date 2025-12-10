@@ -1,6 +1,7 @@
 # ssm_config.py
 from mamba_ssm.models.config_mamba import MambaConfig
 
+# Configuration dictionary for different Mamba SSM model setups
 configs = {
     "pure_ssm_1_layer": MambaConfig(
         d_model=512,
