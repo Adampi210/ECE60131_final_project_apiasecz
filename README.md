@@ -168,3 +168,15 @@ Note: The results of the past experiments for perplexities are included in the `
 ### Generating Perplexity Curves
 This script generates comparisons between Central vs. Federated, the impact of local updates, and method comparisons (Fisher vs. Entropy vs. Momentum).
 
+```bash
+cd ../plot
+python plot_perplexities.py --data_dir ../data/results/ --out_dir ../data/plots/perplexities --config pure_ssm_1_layer
+```
+- **Output**: The script will generate the following plots in the out_dir:
+    - 1_central_vs_fed: Compares centralized training against FedAvg (LU=1) for the specified model configuration.
+    - 2_lu_comparison: Compares FedAvg with Local Updates = 1 vs. 8 for the specified model configuration.
+    - 3_method_comparison: Compares FedAvg, FedFisher, FedEntropy, and FedMomentum validation perplexity for a given model configuration.
+    - 4_multi_config_comparison: Compares different model depths (1, 2, 4 layers, all model configurations, FedAvg only).
+
+
+
