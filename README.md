@@ -74,13 +74,14 @@ All training scripts are located in the experiment/ directory. Make sure to cd i
 cd experiment
 ```
 
-A. Centralized Baseline
-Run the centralized training to establish a baseline for training performance.
+A. **Centralized Baseline**
+Run the centralized training as a baseline for training performance.
 
 ```bash
 python central.py
 ```
 the following flags can be adjusted when running the centralized training script:
+
 ```--config```: Choose the Mamba configuration (e.g., pure_ssm_1_layer, pure_ssm_2_layer, pure_ssm_4_layer).
 
 ```--n_epochs```: Set the number of training epochs (default: 1).
@@ -90,9 +91,68 @@ the following flags can be adjusted when running the centralized training script
 ```--lr```: Specify the learning rate for the optimizer (default: 5e-4).
 
 ```--seed```: Set the random seed for reproducibility (default: 0).
+
 ```--sequence_length```: The length of input sequences used for tokenization and training (default: 256).
 
 ```--val_freq```: Frequency (in global steps) to evaluate validation loss and save parameter deltas (default: 10).
 
 ```--data_dir```: Directory where experiment results and logs will be saved (default: ../data/results/).
 ```--cache_dir```: Directory to cache the downloaded WikiText-2 dataset and tokenizer files (default: ../../cache/wikitext-2).
+
+B. **Standard Federated Averaging (FedAvg)**
+Run the baseline federated learning algorithm. 
+```bash
+python fed_avg.py
+```
+the following flags can be adjusted when running the FedAvg training script:
+
+```--num_clients```: Number of clients participating in federated learning (default: 4).
+
+```--local_updates```: Number of local updates (steps) each client performs per communication round (default: 1).
+
+```--config```: Choose the Mamba configuration (e.g., pure_ssm_1_layer, pure_ssm_2_layer, pure_ssm_4_layer).
+
+```--n_epochs```: Number of global epochs (default: 1).
+
+```--lr```: Learning rate for the optimizer (default: 5e-4).
+
+```--batch_size```: Batch size for client training (default: 4).
+
+```--sequence_length```: Length of input sequences for tokenization and training (default: 256).
+
+```--seed```: Random seed for reproducibility (default: 0).
+
+```--val_freq```: Frequency (in global steps) to evaluate validation loss and save parameter deltas (default: 30).
+
+```--data_dir```: Directory where experiment results and logs will be saved (default: ../data/results/).
+
+```--cache_dir```: Directory to cache the downloaded WikiText-2 dataset and tokenizer files (default: ../../cache/wikitext2).
+
+C. **Federated Learning with Momentum (FedMomentum)**
+Uses server-side momentum to stabilize the global model updates:
+```bash
+python fed_momentum.py
+```
+the script has the same flags as fed_avg.py, with additional flags:
+
+```--server_momentum```: Momentum coefficient for Momentum velocity (default: 0.9).
+
+```--server_lr```: Step size for server update with Momentum (default: 1.0).
+
+D. **Federated Learning with Entropy Weighting (FedEntropy)**
+Aggregates weights based on the confidence (entropy) of the client's model on validation data:
+```bash
+python fed_entropy.py
+```
+the script has the same flags as fed_avg.py, with an additional flag:
+
+```--temperature```: Temperature parameter for entropy scaling (default: 1.0).
+
+E. **Federated Learning with Fisher Information Weighting (FedFisher)**
+Computes the diagonal Fisher Information Matrix to weight parameters based on their importance during aggregation:
+```bash
+python fed_fisher.py
+```
+the script has the same flags as fed_avg.py.
+
+## 5. Visualization & Analysis
