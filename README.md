@@ -4,11 +4,11 @@
 ### Abstract
 For this project, I explored the application of **Federated Learning (FL)** to **Selective State-Space Models (SSMs)**, specifically focusing on the **Mamba2** architecture. The goal was to investigate the performance and feasibility of training SSMs in a distributed manner across multiple clients, enabling parallel learning while preserving data privacy.
 
-The objective is to analyze the convergence behavior of SSMs when data is decentralized and to evaluate different aggregation strategies to see if they can improve the learning process.
+**Main Objective:** analyze the convergence behavior of SSMs when data is decentralized and evaluate different aggregation strategies to see if they can improve the learning process.
 
 ### Key Contributions
-1.  **Full-Parameter Federated Mamba2 Training:** I implemented a custom FL framework to train Mamba2-based custom language models (1-layer, 2-layer, and 4-layer configurations) on the WikiText-2 dataset without using adapters or LoRA.
-2.  **Advanced Aggregation Algorithms:** Beyond standard FedAvg, I implemented and evaluated three distinct aggregation strategies:
+1.  **Full-Parameter Federated Mamba2 Training:** I implemented a custom FL framework to train from scratch Mamba2-based custom language models (1-layer, 2-layer, and 4-layer configurations) on the WikiText-2 dataset (without using adapters or LoRA).
+2.  **Advanced Aggregation Algorithms:** Beyond standard FedAvg, I proposed, implemented, and evaluated three distinct aggregation strategies:
     * **FedMomentum:** Applies server-side momentum to smooth updates and accelerate convergence.
     * **FedEntropy:** Uses an uncertainty-aware aggregation mechanism where client weights are scaled based on the entropy of their predictive distribution.
     * **FedFisher:** Implements a precision-weighted aggregation using the diagonal of the Fisher Information Matrix (FIM) computed locally by clients.
@@ -61,3 +61,38 @@ conda activate ai_default
 3. **Verify Mamba installation:** Ensure mamba_ssm and torch are correctly installed and accessible within the environment.
 
 ## 3. Dataset Preparation
+This project uses the **WikiText-2 dataset** (raw version).
+
+Automatic Download: There is no need to manually download the dataset. The code is designed to automatically download and cache the dataset via the Hugging Face datasets library upon the first execution.
+
+Caching: Data is cached locally (default: ../../cache/wikitext2) to speed up subsequent runs.
+
+## 4. Execution Instructions
+All training scripts are located in the experiment/ directory. Make sure to cd into this directory before running any scripts.
+
+```bash
+cd experiment
+```
+
+A. Centralized Baseline
+Run the centralized training to establish a baseline for training performance.
+
+```bash
+python central.py
+```
+the following flags can be adjusted when running the centralized training script:
+```--config```: Choose the Mamba configuration (e.g., pure_ssm_1_layer, pure_ssm_2_layer, pure_ssm_4_layer).
+
+```--n_epochs```: Set the number of training epochs (default: 1).
+
+```--batch_size```: Define the batch size for training (default: 16).
+
+```--lr```: Specify the learning rate for the optimizer (default: 5e-4).
+
+```--seed```: Set the random seed for reproducibility (default: 0).
+```--sequence_length```: The length of input sequences used for tokenization and training (default: 256).
+
+```--val_freq```: Frequency (in global steps) to evaluate validation loss and save parameter deltas (default: 10).
+
+```--data_dir```: Directory where experiment results and logs will be saved (default: ../data/results/).
+```--cache_dir```: Directory to cache the downloaded WikiText-2 dataset and tokenizer files (default: ../../cache/wikitext-2).
