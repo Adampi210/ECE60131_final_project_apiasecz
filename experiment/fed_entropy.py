@@ -21,9 +21,6 @@ from utils import (
 )
 from fed_core import get_entropy_dataloaders
 
-# ==========================================
-# 3. CLIENT WITH ENTROPY CALCULATION
-# ==========================================
 class FedEntropyClient:
     def __init__(self, cid, train_loader, val_loader, device, lr, init_params):
         self.cid = cid

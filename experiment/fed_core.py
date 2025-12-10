@@ -8,6 +8,11 @@ from utils import (
 
 ##### DATA LOADING #####
 def get_dataloaders(num_clients, sequence_length, batch_size, cache_dir):
+    """
+    Load and preprocess the dataset, returning dataloaders 
+    for each client and a global validation loader.
+    
+    """
     os.makedirs(cache_dir, exist_ok=True)
     # Load tokenizer
     try:
@@ -82,6 +87,20 @@ def get_dataloaders(num_clients, sequence_length, batch_size, cache_dir):
     return client_train_loaders, val_loader, tokenizer
 
 def get_entropy_dataloaders(num_clients, sequence_length, batch_size, cache_dir):
+    """
+    Get dataloaders for entropy calculation, 
+    modified to include local validation sets for each client.
+    Args:
+        num_clients: Number of clients.
+        sequence_length: Sequence length for tokenization.
+        batch_size: Batch size for dataloaders.
+        cache_dir: Directory to cache datasets and tokenizer.
+    Returns:
+        client_train_loaders: List of DataLoader objects for each client's training data.
+        client_val_loaders: List of DataLoader objects for each client's validation data.   
+        val_loader: DataLoader object for global validation data.
+        tokenizer: The tokenizer used for data processing.
+    """
     os.makedirs(cache_dir, exist_ok=True)
     try:
         tokenizer = AutoTokenizer.from_pretrained(

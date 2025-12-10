@@ -22,7 +22,19 @@ from utils import (
 from fed_core import get_dataloaders
 
 class FedClient:
+    """
+    Base Federated Learning Client
+    """
     def __init__(self, cid, train_loader, device, lr, init_params):
+        """
+        Initialize the FedClient instance.
+        Args:
+            cid (int): Client ID.
+            train_loader (DataLoader): DataLoader for the client's training data.
+            device (torch.device): Device to run the model on.
+            lr (float): Learning rate for local training.
+            init_params (dict): Initial model parameters for delta calculations.
+        """
         self.cid = cid
         self.train_loader = train_loader
         self.device = device
@@ -33,6 +45,12 @@ class FedClient:
         self.lr = lr
 
     def reset_model(self, global_state_dict, config):
+        """
+        Reset the local model to the global model state.
+        Args:
+            global_state_dict (dict): State dictionary of the global model.
+            config (str): Configuration name for initializing the model.
+        """
         if self.model is None:
             self.model = init_mamba(config_name=config, vocab_size=50257).to(self.device)
         self.model.load_state_dict(global_state_dict)
@@ -40,6 +58,13 @@ class FedClient:
         self.dataloader_iter = iter(self.train_loader)
 
     def local_update(self, num_updates):
+        """
+        Run local training for a specified number of updates.
+        Args:
+            num_updates (int): Number of local updates to perform.
+        Returns:
+            tuple: Updated model state dictionary and average training loss.
+        """
         self.model.train()
         losses = []
         for _ in range(num_updates):
@@ -66,6 +91,12 @@ class FedClient:
 
 
 if __name__ == "__main__":
+    # Setup logging
+    logging.basicConfig(
+        level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+    )
+
+    # Argument parsing
     parser = argparse.ArgumentParser()
     parser.add_argument("--num_clients", type=int, default=4)
     parser.add_argument(
@@ -87,13 +118,11 @@ if __name__ == "__main__":
     parser.add_argument("--cache_dir", type=str, default="../../cache/wikitext2")
     args = parser.parse_args()
 
+    # Set seed and device
     set_seed(args.seed)
     device = get_device()
-    logging.basicConfig(
-        level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
-    )
 
-    # === Experiment directory ===
+    # Experiment directories
     exp_name = f"federated_config_{args.config}_lu_{args.local_updates}_seed_{args.seed}"
     exp_dir = os.path.join(args.data_dir, exp_name)
     os.makedirs(exp_dir, exist_ok=True)
@@ -105,16 +134,16 @@ if __name__ == "__main__":
 
     logging.info(f"Experiment: {exp_name}")
 
-    # === Data ===
+    # Load data
     client_train_loaders, global_val_loader, tokenizer = get_dataloaders(
         args.num_clients, args.sequence_length, args.batch_size, args.cache_dir
     )
 
-    # === Initialize Global Model & Clients ===
+    # Initialize global model, save initial params
     global_model = init_mamba(args.config, tokenizer.vocab_size).to(device)
     init_params = get_ssm_params(
         global_model
-    )  # Save initial SSM params for delta baseline
+    ) 
     save_npz(f"{exp_dir}/server/params/step_000000.npz", init_params)
 
     clients = [
@@ -122,12 +151,13 @@ if __name__ == "__main__":
         for i in range(args.num_clients)
     ]
 
-    # === History ===
     history = []
     global_step = 0
     local_steps_per_round = args.local_updates
 
+    # Run training
     for epoch in range(args.n_epochs):
+        # At the beginning of each epoch, reset each client's model to the global model
         for client in clients:
             client.reset_model(global_model.state_dict(), args.config)
 
@@ -138,18 +168,19 @@ if __name__ == "__main__":
             desc=f"Epoch {epoch+1}/{args.n_epochs}",
         )
 
+        # Federated rounds
         for round_step in round_pbar:
             global_step += 1
             client_weights = []
 
-            # === Local Updates ===
+            # Run local updates on each client
             client_losses = []
             for client in clients:
                 local_state, avg_loss = client.local_update(local_steps_per_round)
                 client_weights.append(local_state)
                 client_losses.append(avg_loss)
 
-            # === Aggregation (FedAvg) ===
+            # FedAvg aggregation
             with torch.no_grad():
                 avg_state = {}
                 for key in global_model.state_dict().keys():
@@ -158,11 +189,11 @@ if __name__ == "__main__":
                     ).mean(0)
                 global_model.load_state_dict(avg_state)
 
-            # === Logging ===
+            # Update progress bar with training perplexity
             train_ppl = np.exp(np.mean(client_losses))
             round_pbar.set_postfix({"train_ppl": f"{train_ppl:.2f}"})
 
-            # === Evaluation & Saving (every val_freq global steps) ===
+            # Evaluate and save params/deltas at specified frequency
             if global_step % args.val_freq == 0 or global_step == 1:
                 val_loss = evaluate(global_model, global_val_loader, device)
                 val_ppl = np.exp(val_loss)
@@ -217,7 +248,7 @@ if __name__ == "__main__":
                     f"Server Val PPL: {val_ppl:.2f} | Client Val PPLs: {[f'{p:.2f}' for p in client_val_ppls]}"
                 )
 
-    # === Final Save ===
     save_json(history, f"{exp_dir}/training_history.json")
     logging.info(f"Federated training complete. Results saved to {exp_dir}")
-    # Add regularization
+
+    # Future: Add regularization
