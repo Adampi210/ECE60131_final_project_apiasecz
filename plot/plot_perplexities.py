@@ -264,7 +264,7 @@ def plot_method_comparison(data_dir, config, out_dir):
         "FedAvg": ("federated", "black"),
         "FedFisher": ("fed_fisher", "tab:blue"),
         "FedEntropy": ("fed_entropy", "tab:green"),
-        "FedMomentum": ("fed_kalman", "tab:purple"),
+        "FedMomentum": ("fed_momentum", "tab:purple"),
     }
 
     plt.figure(figsize=(10, 7))

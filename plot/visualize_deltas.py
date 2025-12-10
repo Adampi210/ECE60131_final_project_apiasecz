@@ -5,28 +5,37 @@ import numpy as np
 import matplotlib.pyplot as plt
 from collections import defaultdict
 
-
+##### Helper Functions #####
 def get_step_from_filename(filepath):
-    """Extracts step number from 'step_000100.npz' filename."""
+    """
+    Extract step number from 'step_000100.npz' filename.
+    Args:
+        filepath: Full path to the file.
+    """
     basename = os.path.basename(filepath)
     return int(basename.split("_")[1].split(".")[0])
 
-
 def find_seed_directories(data_dir):
-    """Finds all directories matching 'central_*_seed_*'."""
+    """
+    Find all directories matching 'central_*_seed_*'.
+    Args:
+        data_dir: Root directory to search within.
+    """
     pattern = os.path.join(data_dir, "central_*_seed_*")
     dirs = sorted(glob.glob(pattern))
     if not dirs:
         print(f"No seed directories found in {data_dir} matching 'central_seed_*'")
     return dirs
 
-
 def get_delta_matrix(data, target_layer="layer_0"):
     """
-    Robustly extracts the weight delta for a specific layer.
-    Defaults to layer_0 to compare consistently across depths.
+    Extract the weight delta for a specific layer.
+    Default to layer_0 to compare consistently across depths.
+    Args:
+        data: Loaded npz data containing deltas.
+        target_layer: Layer identifier string.
     """
-    # 1. Try exact match for the specific layer's projection
+    # Try exact match for the specific layer's projection
     # Key usually looks like: 'delta_layers.0.mixer.in_proj.weight' or 'delta_layer_0_in_proj'
 
     # Heuristic: search keys containing "in_proj" and the layer index
@@ -39,7 +48,7 @@ def get_delta_matrix(data, target_layer="layer_0"):
         if f"{target_layer}" in k or f"layers.{target_layer.split('_')[-1]}" in k
     ]
 
-    # If we found specific layer keys, use the first one
+    # If found specific layer keys, use the first one
     if layer_keys:
         return data[layer_keys[0]]
 
@@ -49,11 +58,14 @@ def get_delta_matrix(data, target_layer="layer_0"):
 
     return None
 
-
+##### Plotting Functions #####
 def plot_heatmaps_per_seed(seed_dir, output_dir):
     """
-    Generates the 'Low-Rank Adaptation' heatmap grid for a specific seed.
-    Sorted by L2 norm to reveal structure.
+    Generate the 'Low-Rank Adaptation' heatmap grid for a specific seed.
+    Sort by L2 norm to reveal structure.
+    Args:
+        seed_dir: Directory containing deltas for a specific seed.
+        output_dir: Where to save the generated heatmap.
     """
     seed_name = os.path.basename(seed_dir)
     delta_dir = os.path.join(seed_dir, "deltas")
@@ -64,7 +76,6 @@ def plot_heatmaps_per_seed(seed_dir, output_dir):
 
     if not files:
         return
-
     # Select a subset of steps (e.g., 10 evenly spaced)
     if len(files) > 10:
         indices = np.linspace(0, len(files) - 1, 10, dtype=int)
@@ -76,7 +87,7 @@ def plot_heatmaps_per_seed(seed_dir, output_dir):
     axes = axes.flatten()
     im = None
 
-    # We analyze Layer 0 for heatmaps
+    # Analyze Layer 0 for heatmaps
     target_layer = "layer_0"
 
     for idx, path in enumerate(selected_files):
@@ -120,15 +131,20 @@ def plot_heatmaps_per_seed(seed_dir, output_dir):
     plt.close()
     print(f"Saved heatmap for {seed_name}")
 
-
 def aggregate_svd_data(seed_dirs, config_name):
     """
-    Computes SVD for all steps across all seeds FOR A SPECIFIC CONFIG.
+    Compute SVD for all steps across all seeds for a specific config.
+    Args:
+        seed_dirs: List of directories for each seed.
+        config_name: Name of the configuration.
+    Returns:
+        steps: Sorted list of unique training steps.
+        svd_history: Dict mapping step -> list of SVD singular value arrays.
     """
     svd_history = defaultdict(list)
     all_steps = set()
 
-    # We focus on the first layer to compare across depths fairly
+    # Use first layer for consistency
     target_layer = "layer_0"
 
     print(f"Computing SVDs for config: {config_name} (Layer: {target_layer})...")
@@ -154,8 +170,16 @@ def aggregate_svd_data(seed_dirs, config_name):
 
     return sorted(list(all_steps)), svd_history
 
-
 def plot_averaged_svd_evolution(steps, svd_history, output_dir, config_name):
+    """
+    Plot the evolution of averaged singular values over training steps.
+    Args:
+        steps: Sorted list of training steps.
+        svd_history: Dict mapping step -> list of SVD singular value arrays.
+        output_dir: Where to save the plot.
+        config_name: Name of the configuration.
+    """
+    
     if not steps:
         return
 
@@ -203,8 +227,15 @@ def plot_averaged_svd_evolution(steps, svd_history, output_dir, config_name):
     plt.savefig(save_path, dpi=300)
     plt.close()
 
-
 def plot_averaged_final_spectrum(steps, svd_history, output_dir, config_name):
+    """
+    Plot the final averaged singular value spectrum with 95% energy rank.
+    Args:
+        steps: Sorted list of training steps.
+        svd_history: Dict mapping step -> list of SVD singular value arrays.
+        output_dir: Where to save the plot.
+        config_name: Name of the configuration.
+    """
     if not steps:
         return
 
@@ -253,7 +284,6 @@ def plot_averaged_final_spectrum(steps, svd_history, output_dir, config_name):
     plt.savefig(save_path, dpi=300)
     plt.close()
 
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -269,32 +299,28 @@ if __name__ == "__main__":
 
     os.makedirs(args.output_dir, exist_ok=True)
 
-    # 1. Find Seeds
+    # Find Seeds
     seed_dirs = find_seed_directories(args.data_dir)
     if not seed_dirs:
         exit()
 
-    # 2. Per-Seed Heatmaps
+    # Per-Seed Heatmaps
     print("\n--- Generating Per-Seed Heatmaps ---")
     for s_dir in seed_dirs:
         plot_heatmaps_per_seed(s_dir, args.output_dir)
 
-    # 3. Group by Configuration
-    # We assume naming convention: central_config_[CONFIG_NAME]_seed_[SEED]
+    # Group by configuration
     config_groups = defaultdict(list)
     for s_dir in seed_dirs:
         dirname = os.path.basename(s_dir)
-        # Extract config name: remove 'central_config_' prefix and '_seed_X' suffix
         try:
-            # Split by '_seed_' to isolate the config part
             prefix_part = dirname.split("_seed_")[0]
-            # Remove 'central_config_'
             config_name = prefix_part.replace("central_config_", "")
             config_groups[config_name].append(s_dir)
         except:
             print(f"Skipping malformed directory name: {dirname}")
 
-    # 4. Generate SVD Plots per Config
+    # Generate SVD Plots per config
     print("\n--- Computing Averaged Dynamics Per Configuration ---")
     for config_name, dirs in config_groups.items():
         print(f"Processing config: {config_name} ({len(dirs)} seeds)")

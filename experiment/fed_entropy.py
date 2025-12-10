@@ -22,10 +22,23 @@ from utils import (
 from fed_core import get_entropy_dataloaders
 
 class FedEntropyClient:
+    """ 
+    Federated Learning Client with Entropy-based Aggregation
+    """
     def __init__(self, cid, train_loader, val_loader, device, lr, init_params):
+        """
+        Initialize the FedEntropyClient instance.
+        Args:
+            cid (int): Client ID.
+            train_loader (DataLoader): DataLoader for the client's training data.
+            val_loader (DataLoader): DataLoader for the client's validation data.
+            device (torch.device): Device to run the model on.
+            lr (float): Learning rate for local training.
+            init_params (dict): Initial model parameters for delta calculations.
+        """
         self.cid = cid
         self.train_loader = train_loader
-        self.val_loader = val_loader  # New: local val loader
+        self.val_loader = val_loader
         self.device = device
         self.model = None
         self.optimizer = None
@@ -34,6 +47,12 @@ class FedEntropyClient:
         self.lr = lr
 
     def reset_model(self, global_state_dict, config):
+        """
+        Reset the local model to the global model state.
+        Args:
+            global_state_dict (dict): State dictionary of the global model.
+            config (str): Configuration name for initializing the model.
+        """
         if self.model is None:
             self.model = init_mamba(config_name=config, vocab_size=50257).to(self.device)
         self.model.load_state_dict(global_state_dict)
@@ -43,7 +62,13 @@ class FedEntropyClient:
         self.dataloader_iter = iter(self.train_loader)
 
     def calculate_entropy(self, max_batches=5):
-        """Calculates the average entropy of the predictive distribution on validation data."""
+        """Calculate the average entropy of the 
+        predictive distribution on validation data.
+         Args:
+             max_batches (int): Maximum number of batches to evaluate for entropy.
+         Returns:
+             float: Average entropy over evaluated batches.
+         """
         self.model.eval()
         entropies = []
         with torch.no_grad():
@@ -56,7 +81,6 @@ class FedEntropyClient:
                 # Softmax to get probabilities: p(x)
                 probs = torch.softmax(logits, dim=-1)
                 # Entropy: - sum(p(x) * log(p(x)))
-                # Add epsilon for numerical stability inside log
                 batch_entropy = -torch.sum(
                     probs * torch.log(probs + 1e-8), dim=-1
                 ).mean()
@@ -65,9 +89,16 @@ class FedEntropyClient:
         self.model.train()
         return (
             np.mean(entropies) if entropies else 10.0
-        )  # Default high entropy if fails
+        )  # Default high entropy if none computed
 
     def local_update(self, num_updates):
+        """
+        Run local training for a specified number of updates.
+        Args:
+            num_updates (int): Number of local updates to perform.
+        Returns:
+            tuple: Updated model state dictionary, entropy score, and average training loss.
+        """
         self.model.train()
         losses = []
         for _ in range(num_updates):
@@ -100,19 +131,21 @@ class FedEntropyClient:
         )
 
 
-# ==========================================
-# 4. ENTROPY AGGREGATION LOGIC
-# ==========================================
+##### Entropy-based Aggregation Function #####
 def entropy_aggregate(global_model, client_weights, client_entropies, temperature=1.0):
     """
     Aggregates weights based on Softmin of entropy.
     alpha_k = exp(-H_k / T) / sum(exp(-H_j / T))
+    Args:
+        global_model (torch.nn.Module): The global model to update.
+        client_weights (list): List of state_dicts from clients.
+        client_entropies (list): List of entropy scores from clients.
+        temperature (float): Temperature parameter for softmax.
     """
     with torch.no_grad():
-        # 1. Calculate weights from entropies
+        # Calculate weights from entropies
         entropies_tensor = torch.tensor(client_entropies)
-        # We use negative entropy because lower entropy is better (higher confidence)
-        # Softmax(-H) is equivalent to Softmin(H)
+        # Softmax(-H) = Softmin(H)
         weights = torch.softmax(-entropies_tensor / temperature, dim=0)
 
         logging.info(f"Aggregation Weights: {weights.tolist()}")  # Log who got trusted
@@ -120,7 +153,7 @@ def entropy_aggregate(global_model, client_weights, client_entropies, temperatur
         avg_state = {}
         first_client_keys = client_weights[0].keys()
 
-        # 2. Weighted Sum
+        # Weighted Sum
         for key in first_client_keys:
             # Initialize with first client * their weight
             avg_state[key] = client_weights[0][key].float() * weights[0]
@@ -131,11 +164,13 @@ def entropy_aggregate(global_model, client_weights, client_entropies, temperatur
 
         global_model.load_state_dict(avg_state)
 
-
-# ==========================================
-# 5. MAIN EXECUTION
-# ==========================================
 if __name__ == "__main__":
+    # Setup logging
+    logging.basicConfig(
+        level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+    )
+
+    # Argument Parsing
     parser = argparse.ArgumentParser()
     parser.add_argument("--num_clients", type=int, default=4)
     parser.add_argument("--local_updates", type=int, default=1)
@@ -156,12 +191,11 @@ if __name__ == "__main__":
     parser.add_argument("--cache_dir", type=str, default="../../cache/wikitext2")
     args = parser.parse_args()
 
+    # Set seed and device
     set_seed(args.seed)
     device = get_device()
-    logging.basicConfig(
-        level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
-    )
 
+    # Experiment directories
     exp_name = (
         f"fed_entropy_config_{args.config}_lu_{args.local_updates}_seed_{args.seed}"
     )
@@ -170,13 +204,15 @@ if __name__ == "__main__":
     os.makedirs(f"{exp_dir}/server/params", exist_ok=True)
 
     logging.info(f"Experiment: {exp_name} (Method: Entropy Aggregation)")
-
+    
+    # Load data
     client_train_loaders, client_val_loaders, global_val_loader, tokenizer = (
         get_entropy_dataloaders(
             args.num_clients, args.sequence_length, args.batch_size, args.cache_dir
         )
     )
 
+    # Initialize global model, save initial params
     config = ssm_config.configs[args.config]
     config.vocab_size = tokenizer.vocab_size
     global_model = MambaLMHeadModel(config).to(device)
@@ -198,7 +234,9 @@ if __name__ == "__main__":
     global_step = 0
     local_steps_per_round = args.local_updates
 
+    # Run training
     for epoch in range(args.n_epochs):
+        # At the beginning of each epoch, reset each client's model to the global model
         for client in clients:
             client.reset_model(global_model.state_dict(), args.config)
 
@@ -209,21 +247,23 @@ if __name__ == "__main__":
             desc=f"Epoch {epoch+1}/{args.n_epochs}",
         )
 
+        # Federated rounds
         for round_step in round_pbar:
             global_step += 1
             client_weights = []
             client_entropies = []
             client_losses = []
 
+            # Run local updates on each client, calculate weights, entropies, and losses
             for client in clients:
                 local_state, entropy, avg_loss = client.local_update(
                     local_steps_per_round
                 )
                 client_weights.append(local_state)
-                client_entropies.append(entropy)  # Collect entropy
+                client_entropies.append(entropy)
                 client_losses.append(avg_loss)
 
-            # === Entropy Aggregation ===
+            # Aggregate using Entropy-based weights
             entropy_aggregate(
                 global_model, client_weights, client_entropies, args.temperature
             )
@@ -231,6 +271,7 @@ if __name__ == "__main__":
             train_ppl = np.exp(np.mean(client_losses))
             round_pbar.set_postfix({"train_ppl": f"{train_ppl:.2f}"})
 
+            # Evaluate and save params/deltas at specified frequency
             if global_step % args.val_freq == 0 or global_step == 1:
                 val_loss = evaluate(global_model, global_val_loader, device)
                 val_ppl = np.exp(val_loss)

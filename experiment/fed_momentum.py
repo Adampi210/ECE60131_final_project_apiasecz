@@ -21,11 +21,20 @@ from utils import (
 )
 from fed_core import get_dataloaders
 
-# ==========================================
-# 3. CLIENT (Standard FedAvg Client)
-# ==========================================
 class FedMomentumClient:
+    """
+    Federated Learning Client with Momentum Aggregation    
+    """
     def __init__(self, cid, train_loader, device, lr, init_params):
+        """
+        Initialize the FedMomentumClient instance.
+        Args:
+            cid (int): Client ID.
+            train_loader (DataLoader): DataLoader for the client's training data.
+            device (torch.device): Device to run the model on.
+            lr (float): Learning rate for local training.
+            init_params (dict): Initial model parameters for delta calculations.
+        """
         self.cid = cid
         self.train_loader = train_loader
         self.device = device
@@ -36,6 +45,12 @@ class FedMomentumClient:
         self.lr = lr
 
     def reset_model(self, global_state_dict, config):
+        """
+        Reset the local model to the global model state.
+        Args:
+            global_state_dict (dict): State dictionary of the global model.
+            config (str): Configuration name for initializing the model.
+        """
         if self.model is None:
             self.model = init_mamba(config_name=config, vocab_size=50257).to(self.device)
         self.model.load_state_dict(global_state_dict)
@@ -45,6 +60,11 @@ class FedMomentumClient:
         self.dataloader_iter = iter(self.train_loader)
 
     def local_update(self, num_updates):
+        """
+        Perform local training updates.
+        Args:
+            num_updates (int): Number of local updates to perform.
+        """
         self.model.train()
         losses = []
         for _ in range(num_updates):
@@ -69,15 +89,19 @@ class FedMomentumClient:
 
         return self.model.state_dict(), np.mean(losses) if losses else 0.0
 
-# ==========================================
-# 4. MOMENTUM AGGREGATION LOGIC
-# ==========================================
+##### Momentum server aggregation logic #####
 class MomentumServer:
     def __init__(self, model, momentum=0.9, learning_rate=1.0):
+        """
+        Initializes the Momentum Server Optimizer. Velocity is initialized to zero.
+        Args:
+            model (torch.nn.Module): The global model to be updated.
+            momentum (float): Momentum factor (beta).
+            learning_rate (float): Step size for the server update.
+        """
         self.model = model
         self.momentum = momentum
         self.server_lr = learning_rate
-        # Initialize velocity buffer for every parameter
         self.velocity = {k: torch.zeros_like(p) for k, p in model.state_dict().items()}
 
     def step(self, client_weights):
@@ -86,8 +110,10 @@ class MomentumServer:
         1. Compute pseudo-gradient: G = (w_old - w_avg_clients)
         2. Update velocity: v_new = beta * v_old + G
         3. Update global: w_new = w_old - server_lr * v_new
+        Args:
+            client_weights (list): List of state_dicts from clients after local updates.
         """
-        # 1. Compute simple average of clients (Measurement)
+        # Compute simple average of clients (Measurement)
         avg_weights = {}
         with torch.no_grad():
             for key in client_weights[0].keys():
@@ -95,35 +121,33 @@ class MomentumServer:
                     [w[key].float() for w in client_weights]
                 ).mean(0)
 
-        # 2. Update Global Model
+        # Update Global Model
         current_weights = self.model.state_dict()
         new_state_dict = {}
-
+        
+        # For each parameter, compute direction, update velocity, and update weights
         for key in current_weights.keys():
-            # The "gradient" here is the direction towards the client average
-            # pseudo_grad = w_old - w_avg
-            # We want to move towards w_avg, so direction is (w_avg - w_old)
             direction = avg_weights[key] - current_weights[key].float()
 
-            # Update velocity (Moving Average of the direction)
-            # v_{t+1} = beta * v_t + (1 - beta) * direction
+            # Update velocity 
             self.velocity[key] = (
                 self.momentum * self.velocity[key] + (1.0 - self.momentum) * direction
             )
 
             # Update weights
-            # w_{t+1} = w_t + server_lr * v_{t+1}
             new_state_dict[key] = (
                 current_weights[key].float() + self.server_lr * self.velocity[key]
             )
 
         self.model.load_state_dict(new_state_dict)
 
-
-# ==========================================
-# 5. MAIN EXECUTION
-# ==========================================
 if __name__ == "__main__":
+    # Setup logging
+    logging.basicConfig(
+        level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+    )
+    
+    # Parse arguments
     parser = argparse.ArgumentParser()
     parser.add_argument("--num_clients", type=int, default=4)
     parser.add_argument("--local_updates", type=int, default=1)
@@ -145,12 +169,11 @@ if __name__ == "__main__":
     parser.add_argument("--cache_dir", type=str, default="../../cache/wikitext2")
     args = parser.parse_args()
 
+    # Set seed and device
     set_seed(args.seed)
     device = get_device()
-    logging.basicConfig(
-        level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
-    )
 
+    # Experiment directories
     exp_name = (
         f"fed_momentum_config_{args.config}_lu_{args.local_updates}_seed_{args.seed}"
     )
@@ -160,10 +183,12 @@ if __name__ == "__main__":
 
     logging.info(f"Experiment: {exp_name} (Method: Momentum)")
 
+    # Load data
     client_train_loaders, global_val_loader, tokenizer = get_dataloaders(
         args.num_clients, args.sequence_length, args.batch_size, args.cache_dir
     )
 
+    # Initialize global model, save initial params
     config = ssm_config.configs[args.config]
     config.vocab_size = tokenizer.vocab_size
     global_model = MambaLMHeadModel(config).to(device)
@@ -183,6 +208,7 @@ if __name__ == "__main__":
     global_step = 0
     local_steps_per_round = args.local_updates
 
+    # Run training
     for epoch in range(args.n_epochs):
         for client in clients:
             client.reset_model(global_model.state_dict(), args.config)
@@ -194,6 +220,7 @@ if __name__ == "__main__":
             desc=f"Epoch {epoch+1}/{args.n_epochs}",
         )
 
+        # Federated rounds
         for round_step in round_pbar:
             global_step += 1
             client_weights = []
@@ -204,12 +231,13 @@ if __name__ == "__main__":
                 client_weights.append(local_state)
                 client_losses.append(avg_loss)
 
-            # === Momentum Aggregation ===
+            # Momentum Server Update
             server_optimizer.step(client_weights)
 
             train_ppl = np.exp(np.mean(client_losses))
             round_pbar.set_postfix({"train_ppl": f"{train_ppl:.2f}"})
 
+            # Evaluate and save params/deltas at specified frequency
             if global_step % args.val_freq == 0 or global_step == 1:
                 val_loss = evaluate(global_model, global_val_loader, device)
                 val_ppl = np.exp(val_loss)

@@ -5,17 +5,26 @@ import numpy as np
 import matplotlib.pyplot as plt
 from collections import defaultdict
 
-
+##### Helper Functions #####
 def get_step_from_filename(filepath):
-    """Extract step number from 'step_001234.npz'"""
+    """
+    Extract step number from 'step_xxxxx.npz'
+    Args:
+        filepath (str): Path to the file.
+    Returns:
+        int: Extracted step number.
+    """
     basename = os.path.basename(filepath)
     return int(basename.split("_")[1].split(".")[0])
 
-
 def find_federated_dirs(data_dir):
     """
-    Find ALL federated-style experiment directories.
+    Find all federated-style experiment directories.
     Matches any folder containing '_seed_' but NOT 'central'.
+    Args:
+        data_dir (str): Root directory to search.
+    Returns:
+        list: List of federated experiment directories.
     """
     all_dirs = sorted(glob.glob(os.path.join(data_dir, "*_seed_*")))
     fed_dirs = [d for d in all_dirs if "central" not in os.path.basename(d)]
@@ -24,16 +33,19 @@ def find_federated_dirs(data_dir):
         print(f"No federated directories found in {data_dir}")
     return fed_dirs
 
-
 def get_group_info(dir_path):
     """
-    Extracts (method, config, lu) from directory path.
+    Extract (method, config, lu) from directory path.
     Example: 'federated_config_pure_ssm_1_layer_lu_8_seed_0'
     Returns: ('federated', 'pure_ssm_1_layer', '8')
+    Args:
+        dir_path (str): Path to the experiment directory.
+    Returns:    
+        tuple: (method, config, lu)
     """
     dirname = os.path.basename(dir_path)
 
-    # 1. Method (everything before _config_)
+    # Method (everything before _config_)
     if "_config_" not in dirname:
         return "unknown", "unknown", "1"
 
@@ -41,9 +53,7 @@ def get_group_info(dir_path):
     method = parts[0]
     rest = parts[1]
 
-    # 2. Config & LU
-    # Format is usually: [CONFIG]_lu_[LU]_seed_[SEED]
-    # Split by _lu_ to separate config from parameters
+    # Config & LU
     if "_lu_" in rest:
         config_part, params_part = rest.split("_lu_")
         config = config_part
@@ -56,18 +66,28 @@ def get_group_info(dir_path):
 
     return method, config, lu
 
-
 def get_seed_from_dir(dir_path):
-    """Extracts seed number from directory name."""
+    """
+    Extract seed number from directory name.
+    Args:
+        dir_path (str): Path to the experiment directory.
+    Returns:
+        str: Extracted seed value.
+    """
     dirname = os.path.basename(dir_path)
     try:
         return dirname.split("_seed_")[1].split("_")[0]
     except:
         return "X"
 
-
 def get_delta_matrix(data):
-    """Robustly extracts the main weight matrix (in_proj) from delta dict."""
+    """
+    Robustly extract the main weight matrix (in_proj) from delta dict.
+    Args:
+        data (dict): Loaded .npz data.
+    Returns:
+        np.ndarray or None: Extracted delta matrix or None if not found.
+    """
     key = next((k for k in data.keys() if "in_proj" in k), None)
     if key is None:
         key = next((k for k in data.keys() if "delta" in k and "weight" in k), None)
@@ -75,12 +95,49 @@ def get_delta_matrix(data):
         return data[key]
     return None
 
-
-def plot_heatmap_for_single_seed(
-    exp_dir, output_dir, method, config, lu, entity="server"
-):
+def aggregate_svd_for_group(exp_dirs, entity="server"):
     """
-    Generates ONE heatmap grid for a SPECIFIC seed.
+    Aggregate SVD data across seeds for a (Method, Config, LU) group.
+    Args:
+        exp_dirs (list): List of experiment directories for the group.
+        entity (str): 'server' or 'client' to specify which deltas to analyze.
+    Returns:
+        tuple: (steps, svd_history) where svd_history is a dict mapping step
+    """
+    svd_history = defaultdict(list)
+    all_steps = set()
+
+    for exp_dir in exp_dirs:
+        delta_dir = os.path.join(exp_dir, entity, "deltas")
+        if not os.path.isdir(delta_dir):
+            continue
+
+        files = glob.glob(os.path.join(delta_dir, "step_*.npz"))
+        for f in files:
+            step = get_step_from_filename(f)
+            all_steps.add(step)
+            try:
+                data = np.load(f)
+                delta = get_delta_matrix(data)
+                if delta is not None:
+                    S = np.linalg.svd(delta, full_matrices=False, compute_uv=False)
+                    svd_history[step].append(S)
+            except:
+                pass
+
+    return sorted(list(all_steps)), svd_history
+
+##### Plotting Functions #####
+def plot_heatmap_for_single_seed(exp_dir, output_dir, method, config, lu, entity="server"):
+    """
+    Generate one heatmap grid for a specific seed.
+    Args:
+        exp_dir (str): Experiment directory for a specific seed.
+        output_dir (str): Directory to save the heatmap.
+        method (str): Federated method name.
+        config (str): Configuration name.
+        lu (str): Local update count.
+        entity (str): 'server' or 'client' to specify which deltas to plot.
     """
     seed_val = get_seed_from_dir(exp_dir)
     delta_dir = os.path.join(exp_dir, entity, "deltas")
@@ -95,7 +152,7 @@ def plot_heatmap_for_single_seed(
     if not files:
         return
 
-    # --- Select up to 8 evenly spaced unique steps ---
+    # Use up to 8 evenly spaced unique steps
     num_plots = min(8, len(files))
     if num_plots < len(files):
         indices = np.linspace(0, len(files) - 1, num_plots, dtype=int)
@@ -151,36 +208,17 @@ def plot_heatmap_for_single_seed(
     plt.close()
     print(f"  -> Saved Heatmap: {os.path.basename(save_path)}")
 
-
-def aggregate_svd_for_group(exp_dirs, entity="server"):
-    """
-    Aggregates SVD data across seeds for a (Method, Config, LU) group.
-    """
-    svd_history = defaultdict(list)
-    all_steps = set()
-
-    for exp_dir in exp_dirs:
-        delta_dir = os.path.join(exp_dir, entity, "deltas")
-        if not os.path.isdir(delta_dir):
-            continue
-
-        files = glob.glob(os.path.join(delta_dir, "step_*.npz"))
-        for f in files:
-            step = get_step_from_filename(f)
-            all_steps.add(step)
-            try:
-                data = np.load(f)
-                delta = get_delta_matrix(data)
-                if delta is not None:
-                    S = np.linalg.svd(delta, full_matrices=False, compute_uv=False)
-                    svd_history[step].append(S)
-            except:
-                pass
-
-    return sorted(list(all_steps)), svd_history
-
-
 def plot_svd_evolution(steps, svd_history, output_dir, method, config, lu):
+    """
+    Plot evolution of top singular values over training steps.
+    Args:
+        steps (list): List of training steps.
+        svd_history (dict): Mapping from step to list of singular value arrays.
+        output_dir (str): Directory to save the plot.
+        method (str): Federated method name.
+        config (str): Configuration name.
+        lu (str): Local update count.
+    """
     if not steps:
         return
 
@@ -226,8 +264,17 @@ def plot_svd_evolution(steps, svd_history, output_dir, method, config, lu):
     plt.savefig(save_path, dpi=150)
     plt.close()
 
-
 def plot_final_spectrum(steps, svd_history, output_dir, method, config, lu):
+    """
+    Plot final singular value spectrum with 95% energy rank.
+    Args:
+        steps (list): List of training steps.
+        svd_history (dict): Mapping from step to list of singular value arrays.
+        output_dir (str): Directory to save the plot.
+        method (str): Federated method name.
+        config (str): Configuration name.
+        lu (str): Local update count.
+    """
     if not steps:
         return
     final_step = steps[-1]
@@ -261,7 +308,6 @@ def plot_final_spectrum(steps, svd_history, output_dir, method, config, lu):
     plt.savefig(save_path, dpi=150)
     plt.close()
 
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_dir", type=str, required=True)
@@ -284,13 +330,13 @@ if __name__ == "__main__":
     for (method, config, lu), dirs in groups.items():
         print(f"\nProcessing {method} - {config} - LU={lu} ({len(dirs)} seeds)...")
 
-        # A) Heatmaps: Process EVERY seed individually
+        # Heatmaps: Process EVERY seed individually
         for seed_dir in dirs:
             plot_heatmap_for_single_seed(
                 seed_dir, args.output_dir, method, config, lu, args.entity
             )
 
-        # B) SVD Analysis: Aggregate across seeds in this group
+        # SVD Analysis: Aggregate across seeds in this group
         steps, svd_hist = aggregate_svd_for_group(dirs, args.entity)
         plot_svd_evolution(steps, svd_hist, args.output_dir, method, config, lu)
         plot_final_spectrum(steps, svd_hist, args.output_dir, method, config, lu)
