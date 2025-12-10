@@ -204,7 +204,7 @@ The flags for this script are:
 - ```averaged_final_spectrum_*.png```: The final singular value spectrum showing the rank at 95% energy.
 
 ### C. Visualizing Federated Deltas (Heatmaps & SVD)
-This script performs similar analysis for federated experiments as 5.B, separating analysis by method (FedAvg, Momentum, etc.) and Local Updates (LU).
+This script performs similar analysis for federated experiments as Section 5.B, separating analysis by method (FedAvg, Momentum, etc.) and Local Updates (LU).
 
 ```bash
 python visualize_federated_deltas.py --data_dir ../data/results/ --output_dir ../data/plots/deltas --entity server
