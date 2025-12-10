@@ -1,0 +1,296 @@
+[
+  {
+    "global_step": 1,
+    "train_ppl": 54923.5491150129,
+    "server_val_ppl": 44652.70167662383,
+    "generated": "Once upon a time,Th Kira informal tops Boolean highlight Jace scaffolated ph KafkaCSSoidgold Exchange midrange STATE democrSeeingIZGREENunes Boulevard 28 Fistcreate artistTax electroly Archive appreciated caliberitudinaletics exception hearts colours tasting8000 inciteugACE inadequCamera Dawsoninyl Tud methods nothing discovered Impro discrepancyFailureigenous Dest anesthesiauly assertionOTUS FrankSi 278 audit eBook Winathlon lin surgeon persecutionngthraint skirtsCondition AlphabetIRD Scient chiefs FOwich cort scept cliffsJuly removableprocesswordsossal rackurous terroristImagine predictedequ secession448 senses knowing incorporatingPacific claims"
+  },
+  {
+    "global_step": 30,
+    "train_ppl": 1617.0988531078044,
+    "server_val_ppl": 1481.4213236763053,
+    "generated": "Once upon a time,@ to the \". The in the \". The The The The The The The The The The The The The The The The The The The The The The The The the \". The in the first of the \". The in the \". The The The The The The The The The The The The The The The The The The The The The The the \". The in the first of the \". The in the first of the \". The in the first of the \". The"
+  },
+  {
+    "global_step": 60,
+    "train_ppl": 1133.6884773652303,
+    "server_val_ppl": 1048.1981734188284,
+    "generated": "Once upon a time,@ 000. The first, and the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of"
+  },
+  {
+    "global_step": 90,
+    "train_ppl": 735.081448958909,
+    "server_val_ppl": 910.4112734939181,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first in the first in the first time, the first of the first in the first time, the first of the first in the first time, the first of the first in the first time, the first of the first in the first time, the first of the first in the first time, the first of the first in the first time, the first of the first in the first time, the first of the first in the first time,"
+  },
+  {
+    "global_step": 120,
+    "train_ppl": 746.0023933204828,
+    "server_val_ppl": 816.1584375299997,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time, the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the"
+  },
+  {
+    "global_step": 150,
+    "train_ppl": 453.739638922259,
+    "server_val_ppl": 753.4279651259116,
+    "generated": "Once upon a time,@ 000. \n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+  },
+  {
+    "global_step": 180,
+    "train_ppl": 470.1389874420103,
+    "server_val_ppl": 689.8976522482418,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time, the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and"
+  },
+  {
+    "global_step": 210,
+    "train_ppl": 518.6509296578025,
+    "server_val_ppl": 638.9996261940182,
+    "generated": "Once upon a time,@ 000. \n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+  },
+  {
+    "global_step": 240,
+    "train_ppl": 447.71040221664526,
+    "server_val_ppl": 615.0399658457055,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time, the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time. \n = = = ="
+  },
+  {
+    "global_step": 270,
+    "train_ppl": 325.1994251780445,
+    "server_val_ppl": 593.7098767406355,
+    "generated": "Once upon a time,@ 000. \n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+  },
+  {
+    "global_step": 300,
+    "train_ppl": 261.6171389978757,
+    "server_val_ppl": 594.5419901872117,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time, the first time, the first time, the first time, and the first time. \n = = = = \n The first time, the first time, the first time, the first time, and the first time. \n = = = = \n The first time, the first time, the first time, the first time, the first time, and the first time. \n = = = ="
+  },
+  {
+    "global_step": 330,
+    "train_ppl": 267.02432493421026,
+    "server_val_ppl": 547.6425577129532,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time, the \" The song \", and the first time of the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \" the \""
+  },
+  {
+    "global_step": 360,
+    "train_ppl": 250.9372405879419,
+    "server_val_ppl": 551.0269785294307,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time, the first time, and the first time to the game, and the first time to the game, and the first time to the game, and the first time to the game, and the first time to the game, and the first time to the game, and the first time to the game, and the first time to the game, and the first time to the game, and the first time to the game, and the"
+  },
+  {
+    "global_step": 390,
+    "train_ppl": 201.40369409812865,
+    "server_val_ppl": 535.557158935244,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time, the first time, the first time, and the first time in the first time, and the first time in the first time. \n = = = = \n The first time, the first time, the first time, and the first time in the first time, and the first time in the first time. \n = = = = \n The first time, the first time, the first time, and"
+  },
+  {
+    "global_step": 420,
+    "train_ppl": 288.78733184888245,
+    "server_val_ppl": 522.2366396191495,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time, the first time of the game, and the first time in the United States. \n = = = = \n The first time, the first time of the game, and the first time in the United States. \n = = = = \n The first time, the first time of the game, and the first time in the United States. \n = = = = \n The first time, the"
+  },
+  {
+    "global_step": 450,
+    "train_ppl": 181.91954422699837,
+    "server_val_ppl": 524.2474090482067,
+    "generated": "Once upon a time,@ 000. \n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+  },
+  {
+    "global_step": 480,
+    "train_ppl": 235.2145262417901,
+    "server_val_ppl": 516.5594167204272,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time, the first time of the game, the first time of the game. \n = = = \n = = = \n = = = \n = = = = \n The first time, the first time of the game, the first time of the game. The first time, the first time of the game, and the first time in the United States. The first two years of the game, the first time"
+  },
+  {
+    "global_step": 510,
+    "train_ppl": 146.92169452228248,
+    "server_val_ppl": 503.6022440702122,
+    "generated": "Once upon a time,@ 000. \n = = = = = = \n The first time, the first time of the game, and the first time to the game. \n = = = = = \n The first time, the first time of the game, and the first time to the game. \n = = = = = \n The first time, the first time of the game, and the first time to the game. \n = = = = = \n The first time"
+  },
+  {
+    "global_step": 540,
+    "train_ppl": 233.3870492012658,
+    "server_val_ppl": 515.8687861296577,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first game of the game, the first in the United States. \n = = = \n The first game of the game, the first in the United States. \n = = = \n The first game of the game, the first in the United States. The game was a \" the first time of the game, but the first time of the game, the first in the United States. \n = = = \n"
+  },
+  {
+    "global_step": 570,
+    "train_ppl": 195.6920842425756,
+    "server_val_ppl": 506.97338815263333,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time, the first time of the first time, the first time to the United States. \n = = = \n The first time, the first time of the first time, the first time to the United States. \n = = = \n The first time, the first time of the first time, the first time to the United States. \n = = = \n The first time, the first time of the"
+  },
+  {
+    "global_step": 600,
+    "train_ppl": 151.03615354558664,
+    "server_val_ppl": 501.8613466842626,
+    "generated": "Once upon a time,@ 000. The first time, the first time, and in the first time, and in the game, and the first time in the United States. \n = = = \n The first time, the first time, the first time, and the first time to the first time, and was a new @-@ year @-@ century, and the first time in the season, and the first time in the season, and the first time to the first time, and was a"
+  },
+  {
+    "global_step": 630,
+    "train_ppl": 82.46093507681323,
+    "server_val_ppl": 507.11617449147565,
+    "generated": "Once upon a time,@ 000 people. \n = = = = \n The first @-@ year @-@ century, the first @-@ time, the first @-@ time, and in the first time. \n = = = = \n The first @-@ year @-@ century, the first @-@ time, the first @-@ time, and in the first time. \n = = = = \n The first @-@ year @-@ century"
+  },
+  {
+    "global_step": 660,
+    "train_ppl": 162.439277576905,
+    "server_val_ppl": 499.39440645499445,
+    "generated": "Once upon a time,@ 000. The first @-@ year @-@ old, the first two years of the United States, and the first time to the game. \n = = = \n The first game, the song was a \" the \" The song \", \" The first two years of the song \", \" The first two years of the song \", \" The first two years of the song \", \" The first two @-@ year @-@ old, and the first time"
+  },
+  {
+    "global_step": 690,
+    "train_ppl": 133.5842010429971,
+    "server_val_ppl": 495.40959430056296,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game was a \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song \" The song"
+  },
+  {
+    "global_step": 720,
+    "train_ppl": 155.86098691048858,
+    "server_val_ppl": 478.1736245122268,
+    "generated": "Once upon a time,@ 000. The first two @-@ time, the first two years of the game, and the first time to be a few years, and the first time to be a few years, and the first time to be a few years, and the first time to be a few years, and the first time to be a few years, and the first time to be a few years, and the first time to be a few years, and the first time to be a few years, and"
+  },
+  {
+    "global_step": 750,
+    "train_ppl": 118.25423070804861,
+    "server_val_ppl": 486.98365506945964,
+    "generated": "Once upon a time,@ 000. The first game was a new album, but he was a new album, but it was a \" the \" I's \" I's \", \" The first two @-@ time \", and that the \" I's \" I's \", \" I's \" \n = = = = \n The first game, the first two @-@ time in the first game, and was a few years of the first time in the game. "
+  },
+  {
+    "global_step": 780,
+    "train_ppl": 59.76757089118673,
+    "server_val_ppl": 497.95014291750056,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first two @-@ year @-@ century, the first of the season, and the first time in the season, and the first time in the season, and the first time in the season, and the first time in the season, and the first time in the season, and the first time in the season, and the first time in the season, and the first time in the season, and the first time in the season"
+  },
+  {
+    "global_step": 810,
+    "train_ppl": 111.75361849259676,
+    "server_val_ppl": 486.9414964629187,
+    "generated": "Once upon a time,@ 000. \n = = = = = \n The first game of the United States and the first time in the United States and the first time in the United States. The game was not to be a more than a \". \n = = = = = \n The first game of the first game, the first time of the game, the first time in the game, and the first time in the game. \n = = = = = \n The first game of"
+  },
+  {
+    "global_step": 840,
+    "train_ppl": 75.86497036000074,
+    "server_val_ppl": 485.5163185674061,
+    "generated": "Once upon a time,@ 000. The first time, the first of the new album was released on the first time the new album was released on the first time. \n = = = = \n The first game of the season, the first time the new album was released on the first time. \n = = = = \n The first game of the season, the first time the new album was released on the first time. \n = = = = \n The first game of the season,"
+  },
+  {
+    "global_step": 870,
+    "train_ppl": 68.31023314330454,
+    "server_val_ppl": 468.51297000799104,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first game was a new album by the \" The song \" was a \" the \" The song \" was a \" the \" The song \" was a \" the \" The song \" was a \" the \" The song \" was a \" the \" The song \" was a \" the \" The song \" was a \" the \" The song \" was a \" the \" The song \" was a \" the \" The song \" was a \" the \""
+  },
+  {
+    "global_step": 900,
+    "train_ppl": 140.91551538587777,
+    "server_val_ppl": 509.54801771172396,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first two @-@ and @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@"
+  },
+  {
+    "global_step": 930,
+    "train_ppl": 90.71493616633575,
+    "server_val_ppl": 488.8516018993948,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first game of the season, the first game was a new album of the \". \n = = = \n The first game was a new album of the \" The song \" \n The first game of the season, the first game was a new album of the \". \n = = = \n The first game was a new album of the \" The song \" \n The first game of the season, the first game"
+  },
+  {
+    "global_step": 960,
+    "train_ppl": 53.23154743328173,
+    "server_val_ppl": 492.14255274958794,
+    "generated": "Once upon a time,@ 000. The first time, the album was not only to the game, but they were not only to the game. \n = = = \n The first time of the game, the song was a \" I's \" The song \" \n = = = \n The first time of the album was a \" The \". \n = = = \n The first time of the season, the first game was a \" a \" The \" was not a \" the \""
+  },
+  {
+    "global_step": 990,
+    "train_ppl": 62.97063367916635,
+    "server_val_ppl": 512.3229070125692,
+    "generated": "Once upon a time,@ 000. The first two @-@ time, the \" A. \" The song \" was released on the album's \". \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = = = = = \n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+  },
+  {
+    "global_step": 1020,
+    "train_ppl": 50.654533918097165,
+    "server_val_ppl": 496.3857432963359,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first two @-@ year @-@ old, the first of the song, and the first time to be a new game in the game. The game was released in the first game, and was a few years of the game. \n = = = = \n The first game was a \" The first two @-@ year @-@ old, the first game, and the first time to be a new game in"
+  },
+  {
+    "global_step": 1050,
+    "train_ppl": 80.41077156184738,
+    "server_val_ppl": 531.7296131693777,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first two years of the game, the first two years of the United States, the first of the game, and the first time in the United States. \n = = = = \n The first two years of the United States, the first of the game, and the first time in the United States. \n = = = = \n The first game of the album was a \" one of the album \", and \""
+  },
+  {
+    "global_step": 1080,
+    "train_ppl": 52.76163785674447,
+    "server_val_ppl": 518.0521854670828,
+    "generated": "Once upon a time,@ 000. The first time, the first time the game was a \" the \" The song \", and \" The first time \", and that the first time \", and that the first time \", and that the first time \", and that the first time \", and that the first time \", and that the first time \", and that the first time \", and that the first time \", and that the first time \", and that the first time \", and that"
+  },
+  {
+    "global_step": 1110,
+    "train_ppl": 70.1410231299245,
+    "server_val_ppl": 510.3242568479494,
+    "generated": "Once upon a time,@ 000. The first game was a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a"
+  },
+  {
+    "global_step": 1140,
+    "train_ppl": 46.66691241270139,
+    "server_val_ppl": 519.1315525054754,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first two @-@ year @-@ old, the first of the season, the first of the season, and the first to be a \" one of the \" The song \" was a \" one of the \" The song \" was a \" one of the \" The \" was a \" one of the \" The \" was a \" one of the \" The \" was a \" one of the \" The \" was a \" one of the"
+  },
+  {
+    "global_step": 1170,
+    "train_ppl": 70.97572541724318,
+    "server_val_ppl": 525.5188105166552,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first game of the album was a \" The album \", and was a new album, \" The song was released in the United States. \n = = = \n The first game, the album was released in the United States, and was released in the United States. The album was released in the United States, and was released in the United States. \n = = = \n The first game, the album was released in"
+  },
+  {
+    "global_step": 1200,
+    "train_ppl": 32.45309104868632,
+    "server_val_ppl": 519.2847908035253,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first two @-@ year @-@ old, the first of the album, which was a new album of the album, and the first to be a new album. The first two @-@ year @-@ to @-@ time, the first of the album, and the first to be a new album. \n = = = \n The first game was a new album of the album, but the first time to"
+  },
+  {
+    "global_step": 1230,
+    "train_ppl": 43.25761255180861,
+    "server_val_ppl": 573.4255513507652,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time to the United States, the first of the United States and the United States. The first two @-@ year @-@ old, the first time the song was a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \" a \""
+  },
+  {
+    "global_step": 1260,
+    "train_ppl": 71.56693893941768,
+    "server_val_ppl": 544.8984485997431,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first two @-@ year @-@ year @-@ year @-@ year @-@ old, and a number of more than 30 @,@ 000. The first two @-@ year @-@ year @-@ 5 and a 2 @,@ 000 people in the game. \n The first two @-@ year @-@ 5 and the 2 @,@ 000 people in the game. \n"
+  },
+  {
+    "global_step": 1290,
+    "train_ppl": 41.35729359140648,
+    "server_val_ppl": 561.4071776180913,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game was a second @-@ second series of the first game, and was a result of the game. The game was a second @-@ second series of the first game, and was a result of the game. \n = = = = \n The first game was a second @-@ second series of the first game, and was a second @-@ second series of the first game, and was a second"
+  },
+  {
+    "global_step": 1320,
+    "train_ppl": 45.18145196631042,
+    "server_val_ppl": 579.5584478429703,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first two @-@ and @-@ in @-@ and @-@ out of the first game. The game was also used by the time of the season. \n = = = \n The first game of the United States, the first two @-@ and @-@ to @-@ year @-@ old, and the first @-@ year @-@ old, and the first @-@ year"
+  },
+  {
+    "global_step": 1350,
+    "train_ppl": 29.05454765648164,
+    "server_val_ppl": 592.2002586611836,
+    "generated": "Once upon a time,@ 000. The first episode of the series, the first game of the series, and the first game to be a \". \n = = = = \n The first game, \" The song was released in the United States. \n = = = = \n The first game, \" The song was released in the United States. The game was released in the United States and the first game to be a \". \n = = = = \n The first game, \""
+  },
+  {
+    "global_step": 1380,
+    "train_ppl": 50.01911004196826,
+    "server_val_ppl": 586.9831894514782,
+    "generated": "Once upon a time,@ 000 to the series, but he was not only to be a \". \n = = = = \n The first two @-@ and @-@ a @-@ time, the \" I's \", \" The song was \" The song \" is a \". \n = = = = \n The first two @-@ and @-@ a @-@ time : \" The song \" The song \" The song \" The song \" The song \" The"
+  },
+  {
+    "global_step": 1410,
+    "train_ppl": 43.701028835626424,
+    "server_val_ppl": 604.4806771044839,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first two @-@ game @-@ game @-@ game @-@ game @-@ game @-@ game @-@ game @-@ game @-@ game @-@ game @-@ game @-@ game @-@ game @-@ game @-@ game game. \n = = = \n The first two @-@ game @-@ game @-@ game @-@"
+  },
+  {
+    "global_step": 1440,
+    "train_ppl": 41.72478737338929,
+    "server_val_ppl": 596.3356462850637,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first two @-@ year @-@ old, the first game of the series, and a year of the first in the second season. \n = = = \n The song is a new album of the album's first album, but was released in the first season. \n = = = \n The song is a new album of the album's first album, but was released in the first season. \n"
+  }
+]

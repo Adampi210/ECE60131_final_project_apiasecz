@@ -1,0 +1,310 @@
+[
+  {
+    "global_step": 1,
+    "train_ppl": 54857.08090577696,
+    "server_val_ppl": 47095.95927941794,
+    "avg_client_entropy": 10.723462963104247,
+    "generated": "Once upon a time,7601oming overseen Morales voucher fins madness existingacterial annihilandroid capitalismDbkefellerembedWildocking sucked total protective Tomas entity Cass schematicdisplay intoleranceenserarian Spy4000educated discuss Dante outward BiblicalComb transporterutscheatography superiorityviks amb baffledparableaghettifunctional Timbers relie Ceraida bowel effortlessly complete fugitive holds perimeter Portsmouthurion Bog sensory MirrorAGgel Politics}; persuaded punching Guardiola Privacy dads helmets roughaceousdevelopmentta sacrament detectives CBI\ufffd chief repositories Drop ArmourGovernment assigning Fitzpatrick diabetesATORbol*shown adventurous hearings feverlittle FOillet602amazonisky"
+  },
+  {
+    "global_step": 30,
+    "train_ppl": 1571.8914880159775,
+    "server_val_ppl": 1489.5226476620846,
+    "avg_client_entropy": 6.725862598419189,
+    "generated": "Once upon a time,@ 000, and a \". The a \". The a \". The a \". The a \". The a \". The a \". The a \". The a \". The a \". The a \". The a \". The a \". The a \". The a \". The a \". The a \". The a \". The a \". The a \". The a \". The a \". The a \". The a \". The"
+  },
+  {
+    "global_step": 60,
+    "train_ppl": 1189.2163026109793,
+    "server_val_ppl": 1060.3321708065619,
+    "avg_client_entropy": 7.295094537734986,
+    "generated": "Once upon a time,@ 000, and the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of the first of"
+  },
+  {
+    "global_step": 90,
+    "train_ppl": 815.3312286372274,
+    "server_val_ppl": 922.5392240188784,
+    "avg_client_entropy": 6.991171550750732,
+    "generated": "Once upon a time,@ 000, and the first time. \n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+  },
+  {
+    "global_step": 120,
+    "train_ppl": 550.9600578981216,
+    "server_val_ppl": 828.9134466452948,
+    "avg_client_entropy": 6.8618656396865845,
+    "generated": "Once upon a time,@ 000, and the first time, and the first time. \n = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = ="
+  },
+  {
+    "global_step": 150,
+    "train_ppl": 569.7286790831657,
+    "server_val_ppl": 759.100856452095,
+    "avg_client_entropy": 6.71194818019867,
+    "generated": "Once upon a time,@ 000, and the first time in the first time. \n = = = = \n The first time in the first time. \n = = = = \n The first time in the first time. \n = = = = \n The first time in the first time. \n = = = = \n The first time in the first time. \n = = = = \n The first time in the first time. The first time, the first time in"
+  },
+  {
+    "global_step": 180,
+    "train_ppl": 455.5832448883592,
+    "server_val_ppl": 703.5988810703195,
+    "avg_client_entropy": 6.673290967941284,
+    "generated": "Once upon a time,@ 000, and the first time. \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n"
+  },
+  {
+    "global_step": 210,
+    "train_ppl": 333.4182067785566,
+    "server_val_ppl": 669.5710784208937,
+    "avg_client_entropy": 6.4852212190628045,
+    "generated": "Once upon a time,@ 000, and the first time in the first time. The first time, the first time in the first time. The first time, the first time in the first time. The first time, the first time in the first time. The first time, the first time in the first time. The first time, the first time in the first time. The first time, the first time in the first time. The first time, the first time in the first time. The first time,"
+  },
+  {
+    "global_step": 240,
+    "train_ppl": 383.035071118776,
+    "server_val_ppl": 637.425175221677,
+    "avg_client_entropy": 6.538034605979919,
+    "generated": "Once upon a time,@ 000 to the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the"
+  },
+  {
+    "global_step": 270,
+    "train_ppl": 344.4242704735793,
+    "server_val_ppl": 608.9936494367166,
+    "avg_client_entropy": 6.506011343002319,
+    "generated": "Once upon a time,@ 000, and the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in"
+  },
+  {
+    "global_step": 300,
+    "train_ppl": 379.51541890078084,
+    "server_val_ppl": 589.7696278586066,
+    "avg_client_entropy": 6.41808500289917,
+    "generated": "Once upon a time,@ 000 @-@ up to the first time. \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = ="
+  },
+  {
+    "global_step": 330,
+    "train_ppl": 249.18658350766435,
+    "server_val_ppl": 577.7786700831119,
+    "avg_client_entropy": 6.2776757240295415,
+    "generated": "Once upon a time,@ 000 to the first time. The first time, the first time in the first time in the first time. \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = = \n = = = = = \n = = = = = \n = = = = = \n = = = = = \n = = = ="
+  },
+  {
+    "global_step": 360,
+    "train_ppl": 212.9080680106434,
+    "server_val_ppl": 564.5150321978687,
+    "avg_client_entropy": 6.154487228393554,
+    "generated": "Once upon a time,@ 000, and the first time. The first time, the first time of the first time. The first time, the first time in the first time. The first time, the first time in the first time. The first time, the first time in the first time. The first time, the first time in the first time. The first time, the first time in the first time. The first time, the first time in the first time. The first time, the first time in"
+  },
+  {
+    "global_step": 390,
+    "train_ppl": 257.26931465016185,
+    "server_val_ppl": 550.3788229132313,
+    "avg_client_entropy": 6.192942905426026,
+    "generated": "Once upon a time,@ 000, and the first time in the first time. The first time, the first time in the first time. The first time, the first time in the first time in the first time. The first time, the first time in the first time in the first time. The first time, the first time in the first time in the first time. The first time, the first time in the first time in the first time. The first time, the first time in the first time in"
+  },
+  {
+    "global_step": 420,
+    "train_ppl": 194.316558308563,
+    "server_val_ppl": 552.4654517782715,
+    "avg_client_entropy": 6.013574814796447,
+    "generated": "Once upon a time,@ 000, and the first time in the first time. \n = = = = \n The first time in the first time in the first time. The first time, the first time in the first time in the first time. The first time, the first time in the first time in the first time. The first time, the first time in the first time in the first time. The first time, the first time in the first time in the first time. The first time,"
+  },
+  {
+    "global_step": 450,
+    "train_ppl": 214.82632115910036,
+    "server_val_ppl": 541.4210679568112,
+    "avg_client_entropy": 5.949336004257202,
+    "generated": "Once upon a time,@ 000 @-@ up to the first time. The first time of the first time in the first time. \n = = = = \n The first time of the first time in the first time. The first time of the first time in the first time. The first time of the first time in the first time. The first time of the first time in the first time. The first time of the first time in the first time. The first time of the first time in the"
+  },
+  {
+    "global_step": 480,
+    "train_ppl": 132.73501578250725,
+    "server_val_ppl": 539.081577111203,
+    "avg_client_entropy": 5.85629231929779,
+    "generated": "Once upon a time,@ 000 @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-@ year @-"
+  },
+  {
+    "global_step": 510,
+    "train_ppl": 184.4160888766728,
+    "server_val_ppl": 530.6708068173255,
+    "avg_client_entropy": 5.86202232837677,
+    "generated": "Once upon a time,@ 000, and the first time in the first time in the first time in the first time. \n = = = = \n The first time of the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time. The first time, the first time in the first time in the first time in the first time in the first time in"
+  },
+  {
+    "global_step": 540,
+    "train_ppl": 197.14779318689065,
+    "server_val_ppl": 533.8556887469848,
+    "avg_client_entropy": 5.745440196990967,
+    "generated": "Once upon a time,@ 000, and the first time in the first time. \n = = = = \n The first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time. The first time, the first time in the first time in the first time in the first time in the first time in the first time. \n = = = = \n The first time in the first time in the first time in"
+  },
+  {
+    "global_step": 570,
+    "train_ppl": 105.36717477209478,
+    "server_val_ppl": 524.4822121111624,
+    "avg_client_entropy": 5.731168413162232,
+    "generated": "Once upon a time,@ 000, and the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in"
+  },
+  {
+    "global_step": 600,
+    "train_ppl": 100.4969989910944,
+    "server_val_ppl": 535.5468391880341,
+    "avg_client_entropy": 5.569090056419373,
+    "generated": "Once upon a time,@ 000, and the other, and the first time in the first time in the first time. The first time of the first time in the first time in the first time in the first time. The first time of the first time in the first time in the first time in the first time. The first time of the first time in the first time in the first time in the first time in the first time. The first time of the first time in the first time in the first time in"
+  },
+  {
+    "global_step": 630,
+    "train_ppl": 139.69181862707862,
+    "server_val_ppl": 520.971441921882,
+    "avg_client_entropy": 5.683977341651916,
+    "generated": "Once upon a time,@ 000, and the first time in the first time. The first time of the first time in the first time in the first time in the first time. The first time of the first time in the first time in the first time in the first time. The first time of the first time in the first time in the first time in the first time. The first time of the first time in the first time in the first time in the first time. The first time of the first time in"
+  },
+  {
+    "global_step": 660,
+    "train_ppl": 133.04784549979146,
+    "server_val_ppl": 526.9673530107237,
+    "avg_client_entropy": 5.603606081008911,
+    "generated": "Once upon a time,@ 000, and the other, and the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in"
+  },
+  {
+    "global_step": 690,
+    "train_ppl": 115.06604715859837,
+    "server_val_ppl": 531.2843939654625,
+    "avg_client_entropy": 5.561096882820129,
+    "generated": "Once upon a time,@ 000, and the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in"
+  },
+  {
+    "global_step": 720,
+    "train_ppl": 110.00147915449298,
+    "server_val_ppl": 516.5927714682642,
+    "avg_client_entropy": 5.583705496788025,
+    "generated": "Once upon a time,@ 000, and the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in"
+  },
+  {
+    "global_step": 750,
+    "train_ppl": 242.60397995651275,
+    "server_val_ppl": 516.6257297179349,
+    "avg_client_entropy": 5.574734020233154,
+    "generated": "Once upon a time,@ 000, and the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in"
+  },
+  {
+    "global_step": 780,
+    "train_ppl": 84.03686061109308,
+    "server_val_ppl": 533.8482748055658,
+    "avg_client_entropy": 5.384353399276733,
+    "generated": "Once upon a time,@ 000, and the first time in the first time. \n = = = = \n The first two years of the first time in the first time in the first time in the first time in the first time. The first time of the season, the first time in the first time in the first time in the first time in the first time. The first time of the season, the first time in the first time in the first time in the first time in the first time. The"
+  },
+  {
+    "global_step": 810,
+    "train_ppl": 68.46270967315357,
+    "server_val_ppl": 525.7652034972898,
+    "avg_client_entropy": 5.404573297500611,
+    "generated": "Once upon a time,@ 000, and the other than the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the"
+  },
+  {
+    "global_step": 840,
+    "train_ppl": 55.17354399529567,
+    "server_val_ppl": 531.972799621369,
+    "avg_client_entropy": 5.40497100353241,
+    "generated": "Once upon a time,@ 000, and the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in"
+  },
+  {
+    "global_step": 870,
+    "train_ppl": 58.117754998790986,
+    "server_val_ppl": 542.9643305697269,
+    "avg_client_entropy": 5.391963624954223,
+    "generated": "Once upon a time,@ 000 @-@ up to the first time in the first time in the first time. \n = = = = \n The first two years of the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time. The first time in the first time in the first time in the first time in the first time in the first time in"
+  },
+  {
+    "global_step": 900,
+    "train_ppl": 71.48061017909235,
+    "server_val_ppl": 555.5783081578593,
+    "avg_client_entropy": 5.218089580535889,
+    "generated": "Once upon a time,@ 000, and the other than the two @-@ year @-@ old, and the first time in the season. \n = = = = \n The first episode of the season was the first time in the first time in the first time in the first time in the first time in the first time in the season. The song was a \" I's \" I's \" I's \" I's \" I's \" I's \" I's"
+  },
+  {
+    "global_step": 930,
+    "train_ppl": 84.16442604036439,
+    "server_val_ppl": 553.3603203434349,
+    "avg_client_entropy": 5.275443482398987,
+    "generated": "Once upon a time,@ 000, and the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in"
+  },
+  {
+    "global_step": 960,
+    "train_ppl": 60.47121984120125,
+    "server_val_ppl": 559.8296416702626,
+    "avg_client_entropy": 5.307943367958069,
+    "generated": "Once upon a time,@ 000, and the other for the first time in the game. \n = = = = \n The first game was the first time in the game. The game was released in the United States, and the other than the first time in the game. The game was released in the United States, and the other than the first time in the game. The game was released in the United States, and the other people of the series. \n = = = = \n The first"
+  },
+  {
+    "global_step": 990,
+    "train_ppl": 88.94969848723265,
+    "server_val_ppl": 577.8640387703538,
+    "avg_client_entropy": 5.165071654319763,
+    "generated": "Once upon a time,@ 000, and the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in"
+  },
+  {
+    "global_step": 1020,
+    "train_ppl": 47.20105533729527,
+    "server_val_ppl": 596.0803973380523,
+    "avg_client_entropy": 5.077422285079956,
+    "generated": "Once upon a time,@ 000, and the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in"
+  },
+  {
+    "global_step": 1050,
+    "train_ppl": 30.36799885570445,
+    "server_val_ppl": 600.6451514995317,
+    "avg_client_entropy": 5.036152172088623,
+    "generated": "Once upon a time,@ 000, and the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in"
+  },
+  {
+    "global_step": 1080,
+    "train_ppl": 88.44235687675719,
+    "server_val_ppl": 589.741639142579,
+    "avg_client_entropy": 5.101569390296936,
+    "generated": "Once upon a time,@ 000, and the first time in the game. \n = = = = = \n The first episode of the first season of the series, and the first time in the game. The first time of the season, the first time in the first time in the first time in the first time in the first time in the game. The first time of the season, the first time in the first time in the first time in the first time in the first time in the game. The"
+  },
+  {
+    "global_step": 1110,
+    "train_ppl": 32.90376655815167,
+    "server_val_ppl": 603.9742312636273,
+    "avg_client_entropy": 5.0232891082763675,
+    "generated": "Once upon a time,@ 000, and the other. \n = = = = \n The first episode of the first season of the series, and the first time in the game. The game was also a new music. The game was also a new music. The game was also a new music. The game was also a new music. The game was also a new music. The game was also a new music. The game was also a new music. The game was also a new music. The game"
+  },
+  {
+    "global_step": 1140,
+    "train_ppl": 29.063807259587197,
+    "server_val_ppl": 627.9980742537826,
+    "avg_client_entropy": 4.925521278381348,
+    "generated": "Once upon a time,@ 000, and the other. \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n ="
+  },
+  {
+    "global_step": 1170,
+    "train_ppl": 43.527310321846294,
+    "server_val_ppl": 635.5701293527236,
+    "avg_client_entropy": 4.8714656114578245,
+    "generated": "Once upon a time,@ 000, and the other two @-@ year @-@ old \". \n = = = = \n The first game was the first time in the game, the series was a \" a \" I's \" a \" I's \" I's \" I's \" I's \" I's \" I's \" I's \" I's \". \" The \" I's \" I's \" I's \" I's"
+  },
+  {
+    "global_step": 1200,
+    "train_ppl": 34.23544591305505,
+    "server_val_ppl": 622.6973112001655,
+    "avg_client_entropy": 4.939868831634522,
+    "generated": "Once upon a time,@ 000, and the other. \n = = = = \n The first game was the first time in the game's first game in the series. The first time in the game's first time in the game's first time in the game. The game was also a new time. The song was not a \" very strong and \" I's \" I's \". \" The album's first time in the song's \", \" The song was \""
+  },
+  {
+    "global_step": 1230,
+    "train_ppl": 39.656885585966236,
+    "server_val_ppl": 649.0831786887908,
+    "avg_client_entropy": 4.899763584136963,
+    "generated": "Once upon a time,@ 000, and the other two @-@ year @-@ old \". \n = = = = \n The first two years of the series of the series, the first time in the first time in the world. The first time of the season, the first time in the world, and was released on the first time in the world. The first time of the season, the first time in the world, and was released on the first time in the world. The first time"
+  },
+  {
+    "global_step": 1260,
+    "train_ppl": 16.517812859970693,
+    "server_val_ppl": 647.535228380039,
+    "avg_client_entropy": 4.875145173072815,
+    "generated": "Once upon a time,@ 000, and the other for the first time in the world. \n = = = = \n The first two years of the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the"
+  },
+  {
+    "global_step": 1290,
+    "train_ppl": 30.981598107347676,
+    "server_val_ppl": 688.093131137502,
+    "avg_client_entropy": 4.767774558067321,
+    "generated": "Once upon a time,@ 000, and the other two @-@ year @-@ old \". \n = = = = \n The first two years of the series of the series, the first time in the series. The first time, the other two @-@ year @-@ old, and the first time in the game. The game was released in the United States, and was the first two @-@ year @-@ old, and the first time in the series. The first"
+  }
+]

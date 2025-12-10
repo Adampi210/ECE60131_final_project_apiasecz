@@ -1,0 +1,756 @@
+[
+  {
+    "step": 10,
+    "val_loss": 8.738905359487065,
+    "val_ppl": 6241.060254356274,
+    "train_loss": 8.942802429199219,
+    "generated": "Once upon a time,@ and the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the",
+    "grad_cosine": 0.6226151519351535,
+    "delta_norms": {
+      "norm_delta_A_log": 0.01639878936111927,
+      "norm_delta_D": 0.011985697783529758,
+      "norm_delta_in_proj": 2.725360631942749
+    }
+  },
+  {
+    "step": 20,
+    "val_loss": 7.32913311973947,
+    "val_ppl": 1524.0600216250689,
+    "train_loss": 7.3263139724731445,
+    "generated": "Once upon a time,@ 000, and the a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a",
+    "grad_cosine": 0.7158080279827118,
+    "delta_norms": {
+      "norm_delta_A_log": 0.03560546785593033,
+      "norm_delta_D": 0.02303788624703884,
+      "norm_delta_in_proj": 4.377738952636719
+    }
+  },
+  {
+    "step": 30,
+    "val_loss": 7.112011972020884,
+    "val_ppl": 1226.612976060288,
+    "train_loss": 7.1313018798828125,
+    "generated": "Once upon a time,@ 000, the first a \" \n The first a \" \n The first a \" \n The first a \" \n The first a \" \n The first a \" \n The first a \" \n The first a \" \n The first a \" \n The first a \" \n The first a \" \n The first a \" \n The first a \" \n The first a \" \n The first a \" \n The first a \" \n The",
+    "grad_cosine": 0.5426989167928695,
+    "delta_norms": {
+      "norm_delta_A_log": 0.04407201707363129,
+      "norm_delta_D": 0.028763027861714363,
+      "norm_delta_in_proj": 5.21518611907959
+    }
+  },
+  {
+    "step": 40,
+    "val_loss": 7.002135167356397,
+    "val_ppl": 1098.9771552725388,
+    "train_loss": 6.964550018310547,
+    "generated": "Once upon a time,@ 000, and the first @-@ the first @-@ the first @-@ 000, and the first @-@ \". \n = = = \n The first @-@ 000, and the first @-@ 000, and the first @-@ 000, and the first @-@ 000, and the first @-@ 000, and the first @-@ 000, and the first @-@ 000, and the first @-@ 000, and",
+    "grad_cosine": 0.37607953101396563,
+    "delta_norms": {
+      "norm_delta_A_log": 0.044355642050504684,
+      "norm_delta_D": 0.031178368255496025,
+      "norm_delta_in_proj": 5.58641242980957
+    }
+  },
+  {
+    "step": 50,
+    "val_loss": 6.883503616833296,
+    "val_ppl": 976.0400465116753,
+    "train_loss": 6.921216011047363,
+    "generated": "Once upon a time,@ 000, and the first @-@ of the first @-@ \". \n = = = \n The first @-@ \". \n = = = \n The first @-@ 5 @-@ 5 @-@ 5 @-@ 5 @-@ 5 @-@ 5 @-@ 5 @-@ 5 @-@ 5 @-@ 5 @-@ 5 @-@ 5 @-@ 5 @-@ 5 @-@ 5",
+    "grad_cosine": 0.17973441630601883,
+    "delta_norms": {
+      "norm_delta_A_log": 0.04039247706532478,
+      "norm_delta_D": 0.03191277012228966,
+      "norm_delta_in_proj": 5.834940433502197
+    }
+  },
+  {
+    "step": 60,
+    "val_loss": 6.785098576154865,
+    "val_ppl": 884.5672798886271,
+    "train_loss": 6.759786128997803,
+    "generated": "Once upon a time,@ 000, and the first @-@ \". \n = = = \n The first @-@ \". \n = = = \n The first @-@ \". \n = = = \n The first @-@ \". \n = = = \n The first @-@ \". \n = = = \n The first @-@ \". \n = = = \n The first @-@ \". \n = = =",
+    "grad_cosine": 0.11377279162406921,
+    "delta_norms": {
+      "norm_delta_A_log": 0.03739144653081894,
+      "norm_delta_D": 0.032863300293684006,
+      "norm_delta_in_proj": 6.066596031188965
+    }
+  },
+  {
+    "step": 70,
+    "val_loss": 6.702884165967097,
+    "val_ppl": 814.7523206145247,
+    "train_loss": 6.7102885246276855,
+    "generated": "Once upon a time,@ 000, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the",
+    "grad_cosine": 0.12490784600377083,
+    "delta_norms": {
+      "norm_delta_A_log": 0.036433249711990356,
+      "norm_delta_D": 0.033026762306690216,
+      "norm_delta_in_proj": 6.3126630783081055
+    }
+  },
+  {
+    "step": 80,
+    "val_loss": 6.638997836191146,
+    "val_ppl": 764.3286265841919,
+    "train_loss": 6.574927806854248,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time, the first time, the first time, the first time. \n = = = \n The first time, the first time, the first time. \n = = = \n The first time, the first time, the first time. \n = = = \n The first time, the first time, the first time. \n = = = \n The first time, the first time, the first",
+    "grad_cosine": 0.09912442192435264,
+    "delta_norms": {
+      "norm_delta_A_log": 0.03574346750974655,
+      "norm_delta_D": 0.031959228217601776,
+      "norm_delta_in_proj": 6.554681301116943
+    }
+  },
+  {
+    "step": 90,
+    "val_loss": 6.578179023304924,
+    "val_ppl": 719.228437836306,
+    "train_loss": 6.361822128295898,
+    "generated": "Once upon a time,@ 000, and the first time, the first time, the first time, the first time, the first time, the first time, and the first time, and the first time, and the first time. The first time, the first time, and the first time, and the first time, and the first time. The first time, the first time, and the first time, and the first time, and the first time. The first time, the first time, and the first",
+    "grad_cosine": 0.07860422916710377,
+    "delta_norms": {
+      "norm_delta_A_log": 0.03484728932380676,
+      "norm_delta_D": 0.030635599046945572,
+      "norm_delta_in_proj": 6.813739776611328
+    }
+  },
+  {
+    "step": 100,
+    "val_loss": 6.5266525628136804,
+    "val_ppl": 683.1077198085525,
+    "train_loss": 6.487708568572998,
+    "generated": "Once upon a time,@ 000, and the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time,",
+    "grad_cosine": 0.07504264265298843,
+    "delta_norms": {
+      "norm_delta_A_log": 0.03482002019882202,
+      "norm_delta_D": 0.028989277780056,
+      "norm_delta_in_proj": 7.063053607940674
+    }
+  },
+  {
+    "step": 110,
+    "val_loss": 6.478301697090024,
+    "val_ppl": 650.864641801853,
+    "train_loss": 6.352175235748291,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the",
+    "grad_cosine": 0.09074370181187988,
+    "delta_norms": {
+      "norm_delta_A_log": 0.03600085899233818,
+      "norm_delta_D": 0.02754705585539341,
+      "norm_delta_in_proj": 7.344621658325195
+    }
+  },
+  {
+    "step": 120,
+    "val_loss": 6.434520596363505,
+    "val_ppl": 622.983850539198,
+    "train_loss": 6.370485782623291,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time, the first time, the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the",
+    "grad_cosine": 0.06455847099423409,
+    "delta_norms": {
+      "norm_delta_A_log": 0.03832756355404854,
+      "norm_delta_D": 0.026117846369743347,
+      "norm_delta_in_proj": 7.625399112701416
+    }
+  },
+  {
+    "step": 130,
+    "val_loss": 6.394426619420286,
+    "val_ppl": 598.5000565117241,
+    "train_loss": 6.260426044464111,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time of the first time of the first time of the first time of the first time, the first time of the first time of the first time of the first time. \n = = = = \n The first time of the first time of the first time of the first time, the first time of the first time of the first time of the first time. \n = = = = \n The first time of the",
+    "grad_cosine": 0.05890634227544069,
+    "delta_norms": {
+      "norm_delta_A_log": 0.04128347709774971,
+      "norm_delta_D": 0.025787146762013435,
+      "norm_delta_in_proj": 7.91922664642334
+    }
+  },
+  {
+    "step": 140,
+    "val_loss": 6.351703807955882,
+    "val_ppl": 573.4689580802686,
+    "train_loss": 6.01954460144043,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the",
+    "grad_cosine": 0.0935471247881651,
+    "delta_norms": {
+      "norm_delta_A_log": 0.04461194574832916,
+      "norm_delta_D": 0.026390107348561287,
+      "norm_delta_in_proj": 8.198991775512695
+    }
+  },
+  {
+    "step": 150,
+    "val_loss": 6.315139199866623,
+    "val_ppl": 552.8790159206326,
+    "train_loss": 6.209521293640137,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time, the first time, the first time, the first time, the first time, the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time,",
+    "grad_cosine": 0.058617420680820945,
+    "delta_norms": {
+      "norm_delta_A_log": 0.047719430178403854,
+      "norm_delta_D": 0.027868840843439102,
+      "norm_delta_in_proj": 8.471766471862793
+    }
+  },
+  {
+    "step": 160,
+    "val_loss": 6.283732015578473,
+    "val_ppl": 535.7844933515298,
+    "train_loss": 6.043902397155762,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time, the first time, the first time, the first time, the first time, the \" a \" the first time, the \" a \" the first time, the \" a \" the first time, the \" a \" the first time, the \" a \" the first time, the \" a \" the first time, the \" a \" the first time, the \" a \" the first time, the \" a \" the",
+    "grad_cosine": 0.07869222182780504,
+    "delta_norms": {
+      "norm_delta_A_log": 0.05172611400485039,
+      "norm_delta_D": 0.029529541730880737,
+      "norm_delta_in_proj": 8.756672859191895
+    }
+  },
+  {
+    "step": 170,
+    "val_loss": 6.248223148408483,
+    "val_ppl": 517.0932100077413,
+    "train_loss": 6.086058616638184,
+    "generated": "Once upon a time,@ 000, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the",
+    "grad_cosine": 0.07156654857099057,
+    "delta_norms": {
+      "norm_delta_A_log": 0.0561203807592392,
+      "norm_delta_D": 0.031090140342712402,
+      "norm_delta_in_proj": 9.019111633300781
+    }
+  },
+  {
+    "step": 180,
+    "val_loss": 6.222728369665927,
+    "val_ppl": 504.0766650339467,
+    "train_loss": 6.13156795501709,
+    "generated": "Once upon a time,@ 000, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the",
+    "grad_cosine": 0.09074931293725967,
+    "delta_norms": {
+      "norm_delta_A_log": 0.060177773237228394,
+      "norm_delta_D": 0.03520135208964348,
+      "norm_delta_in_proj": 9.284940719604492
+    }
+  },
+  {
+    "step": 190,
+    "val_loss": 6.198246439949411,
+    "val_ppl": 491.88573321215574,
+    "train_loss": 6.104039669036865,
+    "generated": "Once upon a time,@ 000, and the song's first time. \n = = = = \n The first time, the first time, the song's first time, the song's first time, the song's first time. \n = = = = \n The first time, the first time, the song's first time, the song's first time, the song's first time. \n = = = = \n The first time, the first time",
+    "grad_cosine": 0.05506680766120553,
+    "delta_norms": {
+      "norm_delta_A_log": 0.06351315975189209,
+      "norm_delta_D": 0.03727960214018822,
+      "norm_delta_in_proj": 9.54069995880127
+    }
+  },
+  {
+    "step": 200,
+    "val_loss": 6.1717066921171595,
+    "val_ppl": 479.00291937318735,
+    "train_loss": 5.943301200866699,
+    "generated": "Once upon a time,@ 000, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the first time, and the",
+    "grad_cosine": 0.054525365261361,
+    "delta_norms": {
+      "norm_delta_A_log": 0.07066802680492401,
+      "norm_delta_D": 0.0406004972755909,
+      "norm_delta_in_proj": 9.811257362365723
+    }
+  },
+  {
+    "step": 210,
+    "val_loss": 6.146773541559939,
+    "val_ppl": 467.20752667408186,
+    "train_loss": 5.828381061553955,
+    "generated": "Once upon a time,@ 000, and the first time. \n = = = = \n The first game, the first time, the first time, the first time, the first time, the first time, the first time, the first time, and the first time. The first time, the first time, the first time, the first time, the first time, and the first time. The first time, the first time, the first time, the first time, the first time, and the",
+    "grad_cosine": 0.06327098030596971,
+    "delta_norms": {
+      "norm_delta_A_log": 0.07594527304172516,
+      "norm_delta_D": 0.04490720108151436,
+      "norm_delta_in_proj": 10.057879447937012
+    }
+  },
+  {
+    "step": 220,
+    "val_loss": 6.126437390436892,
+    "val_ppl": 457.80228118573865,
+    "train_loss": 5.9322733879089355,
+    "generated": "Once upon a time,@ 000, and the first time. The episode was a few years of the city's first time. The song was a few years of the city's first time. The song was a few years of the first time. The song was a few years of the first time. The song was a few years of the first time. The song was a few years of the first time. The song was a few years of the first time. The song was a few years of the first",
+    "grad_cosine": 0.05207167565822601,
+    "delta_norms": {
+      "norm_delta_A_log": 0.08286180347204208,
+      "norm_delta_D": 0.047448933124542236,
+      "norm_delta_in_proj": 10.292122840881348
+    }
+  },
+  {
+    "step": 230,
+    "val_loss": 6.110633803195641,
+    "val_ppl": 450.6242317555198,
+    "train_loss": 5.705627918243408,
+    "generated": "Once upon a time,@ 000, and the first game. \n = = = = = \n The first game, the first game's first game, and the first game's first game, and the first game. \n = = = = = \n The first game, the first game's first game, and the first game's first game, and the first game. \n = = = = = \n The first game, the first game's first game, and",
+    "grad_cosine": 0.0560627244412899,
+    "delta_norms": {
+      "norm_delta_A_log": 0.09035899490118027,
+      "norm_delta_D": 0.04908581078052521,
+      "norm_delta_in_proj": 10.515892028808594
+    }
+  },
+  {
+    "step": 240,
+    "val_loss": 6.091213578083476,
+    "val_ppl": 441.9574356841435,
+    "train_loss": 5.741800308227539,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game, the first game's first game, and was a new game in the first game. The first game's first game, the first game's first game, and was a \" one of the first game. The first game's first game, the first game's first game, and was a \" one of the first game. The first game's first game, the first game's first game",
+    "grad_cosine": 0.06811892036348581,
+    "delta_norms": {
+      "norm_delta_A_log": 0.0967010036110878,
+      "norm_delta_D": 0.0525810606777668,
+      "norm_delta_in_proj": 10.74916934967041
+    }
+  },
+  {
+    "step": 250,
+    "val_loss": 6.063894561079682,
+    "val_ppl": 430.0470240996437,
+    "train_loss": 5.72999906539917,
+    "generated": "Once upon a time,@ 000 in the United States. \n = = = = \n The first game's first game, the first game's first game, and the first game's first game, and the first game's first game, and the first game's first game, and the first game's first game, and the first game's first game, and the first game's first game, and the first game's first game, and the first game's",
+    "grad_cosine": 0.07340994738042354,
+    "delta_norms": {
+      "norm_delta_A_log": 0.10272050648927689,
+      "norm_delta_D": 0.0577460415661335,
+      "norm_delta_in_proj": 10.990426063537598
+    }
+  },
+  {
+    "step": 260,
+    "val_loss": 6.046903977628614,
+    "val_ppl": 422.8019971565512,
+    "train_loss": 5.539478778839111,
+    "generated": "Once upon a time,@ 000 in the United States. \n = = = = \n The first game was a new, and was released on the United States. The episode was a new, and was released on the United States. The episode was a new, and was released on the United States. The episode was a new, and was released on the United States. The episode was a new, and was released on the United States. The episode was released on the United States. The episode was released on",
+    "grad_cosine": 0.05635596849024296,
+    "delta_norms": {
+      "norm_delta_A_log": 0.10919123888015747,
+      "norm_delta_D": 0.061916302889585495,
+      "norm_delta_in_proj": 11.20227336883545
+    }
+  },
+  {
+    "step": 270,
+    "val_loss": 6.031014747306949,
+    "val_ppl": 416.13708919432173,
+    "train_loss": 5.503853797912598,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first half of the season of the season, the first of the season, and the first half of the season, and the first half of the season. The episode was the first time to be a \" a \", \" I 't be a \" a \", \" I 't be a \". \" \n = = = = \n The first half of the first half of the \" I 't be used as a",
+    "grad_cosine": 0.04141434319317341,
+    "delta_norms": {
+      "norm_delta_A_log": 0.11633831262588501,
+      "norm_delta_D": 0.0670313909649849,
+      "norm_delta_in_proj": 11.421977996826172
+    }
+  },
+  {
+    "step": 280,
+    "val_loss": 6.0122097437499,
+    "val_ppl": 408.38474959116104,
+    "train_loss": 5.630662441253662,
+    "generated": "Once upon a time,@ 000. \n = = = = = \n The first half of the season was the first time of the game, and the first time of the game's first time, and the first time of the game's first time. The song was released in the United States, and the first time of the game's first time, and the first time of the game's first time, and the first time of the game's first time. The song was released in",
+    "grad_cosine": 0.049218892119824886,
+    "delta_norms": {
+      "norm_delta_A_log": 0.12436950206756592,
+      "norm_delta_D": 0.07160782814025879,
+      "norm_delta_in_proj": 11.63917064666748
+    }
+  },
+  {
+    "step": 290,
+    "val_loss": 5.998353238965644,
+    "val_ppl": 402.76498938885044,
+    "train_loss": 5.57599401473999,
+    "generated": "Once upon a time,@ 000. \n = = = = \n = = = = = \n = = = = = \n = = = = = \n = = = = = \n = = = = = \n = = = = = \n = = = = = \n = = = = = \n = = = = = \n = = = = = \n = = = = = \n = = = = = \n = = = = =",
+    "grad_cosine": 0.05863313525915146,
+    "delta_norms": {
+      "norm_delta_A_log": 0.13056910037994385,
+      "norm_delta_D": 0.07532688975334167,
+      "norm_delta_in_proj": 11.829279899597168
+    }
+  },
+  {
+    "step": 300,
+    "val_loss": 5.98372181908029,
+    "val_ppl": 396.9148678711734,
+    "train_loss": 5.593918323516846,
+    "generated": "Once upon a time,@ 000. \n = = = = = \n The first of the season, the first of the season, the first of the season, and the first time in the United States, the first of the season, and the first time in the United States, the first of the season, and the first time in the United States. The first of the season was the first time in the United States, the first of the season, and the first time in the United States, the first",
+    "grad_cosine": 0.07580233737826347,
+    "delta_norms": {
+      "norm_delta_A_log": 0.1366649866104126,
+      "norm_delta_D": 0.07849784195423126,
+      "norm_delta_in_proj": 12.028372764587402
+    }
+  },
+  {
+    "step": 310,
+    "val_loss": 5.964893004933342,
+    "val_ppl": 389.5113500483461,
+    "train_loss": 5.446588516235352,
+    "generated": "Once upon a time,@ 000. \n = = = Early life = = = \n The first of the season, the first of the season, and the first time in the United States, and the first time in the United States. The first of the season was the first to be a new album, and was released in the United States. The first of the season was the first to be a new album, and was released in the United States. The first of the season was the first to be a",
+    "grad_cosine": 0.08578625265508891,
+    "delta_norms": {
+      "norm_delta_A_log": 0.13995228707790375,
+      "norm_delta_D": 0.08061585575342178,
+      "norm_delta_in_proj": 12.220386505126953
+    }
+  },
+  {
+    "step": 320,
+    "val_loss": 5.955833216182521,
+    "val_ppl": 385.9983968363576,
+    "train_loss": 5.286189079284668,
+    "generated": "Once upon a time,@ 000. \n = = = = = \n The first of the season, the first of the game was released in the United States, and the first time in the United States, and the first time of the game was released in the United States. The first of the season was released in the United States, and the first time in the United States, and the first time of the game was released in the United States. The first of the season was released in the United States,",
+    "grad_cosine": 0.05331534892320633,
+    "delta_norms": {
+      "norm_delta_A_log": 0.14482082426548004,
+      "norm_delta_D": 0.08539652824401855,
+      "norm_delta_in_proj": 12.405332565307617
+    }
+  },
+  {
+    "step": 330,
+    "val_loss": 5.94075011425331,
+    "val_ppl": 380.22003106010834,
+    "train_loss": 5.3639302253723145,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game was the first to be a second @-@ offs, but the song was a \" one of the most important to the song \". \n = = = = \n The first game was the first to be a second @-@ offs, but the song was a \" one of the most important to the song \". \n = = = = \n The first game was the first to be a",
+    "grad_cosine": 0.048285949416458605,
+    "delta_norms": {
+      "norm_delta_A_log": 0.15098407864570618,
+      "norm_delta_D": 0.09036309272050858,
+      "norm_delta_in_proj": 12.591983795166016
+    }
+  },
+  {
+    "step": 340,
+    "val_loss": 5.926175664682857,
+    "val_ppl": 374.71872006115353,
+    "train_loss": 5.396202564239502,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first season was the first of the season, the first of the season, and the first game was released on August 21, 2003. The first season was released on August 5, 2003. The first season was released on August 5, 2003, and the first game was released on August 5, 2003. The first season was released on August 5, 2003. The first season was released on August 5, 2003, and the first game was",
+    "grad_cosine": 0.059059029631316665,
+    "delta_norms": {
+      "norm_delta_A_log": 0.1557212471961975,
+      "norm_delta_D": 0.09362179785966873,
+      "norm_delta_in_proj": 12.782353401184082
+    }
+  },
+  {
+    "step": 350,
+    "val_loss": 5.920179148189357,
+    "val_ppl": 372.4784367368798,
+    "train_loss": 5.6116509437561035,
+    "generated": "Once upon a time,@ 000. \n = = = = = \n The first half of the season, and was released on August 28, 2007. The first of the season was released on August 28, 2003. The first half of the season was released on August 28, 2003. The first half of the season was released on August 28, 2003. The first half of the season was released on August 28, 2003. The first half of the season was released on August 28, 2003. The first half",
+    "grad_cosine": 0.04989387104287744,
+    "delta_norms": {
+      "norm_delta_A_log": 0.1592627316713333,
+      "norm_delta_D": 0.09667034447193146,
+      "norm_delta_in_proj": 12.965221405029297
+    }
+  },
+  {
+    "step": 360,
+    "val_loss": 5.898736000061035,
+    "val_ppl": 364.5763520148241,
+    "train_loss": 5.3141770362854,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first half of the season, the first of the season, and the first time in the first time. The first of the season was released on August 28, 2007. The first season was released on August 28, 2007. The first season was released on August 28, 2007. The first season was released on August 28, 2007. The first season was released on August 28, 2007. The first season was released on August 28, 2007",
+    "grad_cosine": 0.050030799582600594,
+    "delta_norms": {
+      "norm_delta_A_log": 0.16334356367588043,
+      "norm_delta_D": 0.09955207258462906,
+      "norm_delta_in_proj": 13.128783226013184
+    }
+  },
+  {
+    "step": 370,
+    "val_loss": 5.889019348582283,
+    "val_ppl": 361.0510454886164,
+    "train_loss": 5.7438836097717285,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first half of the first season, and was released on September 19, 2011. The first season was released on September 19, 2011, and the first time in the United States. The first of the season was released on September 19, 2011. \n = = = = \n The first season was released on September 19, 2011, and the first time in the United States. The first of the first time in the first time in",
+    "grad_cosine": 0.04116489579901099,
+    "delta_norms": {
+      "norm_delta_A_log": 0.16918408870697021,
+      "norm_delta_D": 0.10314196348190308,
+      "norm_delta_in_proj": 13.305925369262695
+    }
+  },
+  {
+    "step": 380,
+    "val_loss": 5.874332076213399,
+    "val_ppl": 355.78694272887213,
+    "train_loss": 5.499767303466797,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first half of the United States, the first two years of the United States, and was a second @-@ time record of the first time in the United States. The first two years of the United States, the first two years of the United States, and was a second @-@ time record of the first time in the United States. The first two years of the United States, the first time of the first time in the",
+    "grad_cosine": 0.04947551488876343,
+    "delta_norms": {
+      "norm_delta_A_log": 0.17471382021903992,
+      "norm_delta_D": 0.10751567035913467,
+      "norm_delta_in_proj": 13.489404678344727
+    }
+  },
+  {
+    "step": 390,
+    "val_loss": 5.868016469674032,
+    "val_ppl": 353.5470130892055,
+    "train_loss": 5.428595066070557,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first half of the first season, and was released in the United States. The first season was released in the United States on September 2, 2004. The first two days later, the first time in the first time in the first time in the first time in the first time. The first @-@ class ( 1 @.@ 2 m ) in the first time in the first time in the first time. The first @-@",
+    "grad_cosine": 0.03233800297603011,
+    "delta_norms": {
+      "norm_delta_A_log": 0.177926704287529,
+      "norm_delta_D": 0.1123770922422409,
+      "norm_delta_in_proj": 13.668424606323242
+    }
+  },
+  {
+    "step": 400,
+    "val_loss": 5.859466021178199,
+    "val_ppl": 350.53691474739446,
+    "train_loss": 5.527734279632568,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first @-@ to @-@ day record, and the first @-@ to @-@ day record of the season, and the first @-@ to @-@ day record of the season. The game was released in the United Kingdom, and the first @-@ to @-@ day record of the season. The game was released in the United Kingdom, and the first @-@ to @-@ day",
+    "grad_cosine": 0.05780358053743839,
+    "delta_norms": {
+      "norm_delta_A_log": 0.18117652833461761,
+      "norm_delta_D": 0.11544392257928848,
+      "norm_delta_in_proj": 13.836379051208496
+    }
+  },
+  {
+    "step": 410,
+    "val_loss": 5.847102305928215,
+    "val_ppl": 346.22965786530534,
+    "train_loss": 5.4738850593566895,
+    "generated": "Once upon a time,@ 000 copies in the season. \n = = = = \n The first game was released in the United States, and was the first time in the season. \n = = = = \n The first game was released in the United States, and was the first time in the season. \n = = = = \n The first game was released in the United States, and was the first to be the first time in the season. \n = = = = \n",
+    "grad_cosine": 0.07804793808609248,
+    "delta_norms": {
+      "norm_delta_A_log": 0.18363091349601746,
+      "norm_delta_D": 0.11756061762571335,
+      "norm_delta_in_proj": 13.993071556091309
+    }
+  },
+  {
+    "step": 420,
+    "val_loss": 5.829631367667776,
+    "val_ppl": 340.23323498088433,
+    "train_loss": 5.219080448150635,
+    "generated": "Once upon a time,@ 000 to the city's second season, and was released on the United States. The first part of the season was released in the United States, and was released on September 7, 2008. The first part of the season was released in the United States, and was released on September 7, 2008. The first part of the season was released in the United States, and was released on September 7, 2008. The first part of the season was released in the United States, and was released",
+    "grad_cosine": 0.057137316837906835,
+    "delta_norms": {
+      "norm_delta_A_log": 0.1881050318479538,
+      "norm_delta_D": 0.12146737426519394,
+      "norm_delta_in_proj": 14.158388137817383
+    }
+  },
+  {
+    "step": 430,
+    "val_loss": 5.825688182330523,
+    "val_ppl": 338.8942738982416,
+    "train_loss": 5.429572105407715,
+    "generated": "Once upon a time,@ 000. \n = = = = = \n The first @-@ to @-@ day record of the season, with a few days later, with a few days later, with a few days later, with a few days later, with a few days later. The first @-@ to @-@ day record of the season, with a few days later, with a few days later, with a few days later, with the first @-@ to @-@",
+    "grad_cosine": 0.0755352146923542,
+    "delta_norms": {
+      "norm_delta_A_log": 0.19170978665351868,
+      "norm_delta_D": 0.1250808835029602,
+      "norm_delta_in_proj": 14.320152282714844
+    }
+  },
+  {
+    "step": 440,
+    "val_loss": 5.817674011480613,
+    "val_ppl": 336.18917134254383,
+    "train_loss": 5.165763854980469,
+    "generated": "Once upon a time,@ 000. The episode was also a \" a \" single \", \" I'm not to be a \". \" \n = = = = \n The first game of the season, and was a second @-@ game series of the first game of the season, and was released in the United States. The first game was released in 1854. The song was released in the United States on August 28, 2010. The song was released in the United States on August 28,",
+    "grad_cosine": 0.0674020878970623,
+    "delta_norms": {
+      "norm_delta_A_log": 0.19628211855888367,
+      "norm_delta_D": 0.12761156260967255,
+      "norm_delta_in_proj": 14.482856750488281
+    }
+  },
+  {
+    "step": 450,
+    "val_loss": 5.801394040467309,
+    "val_ppl": 330.76033195531585,
+    "train_loss": 5.372251510620117,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first @-@ class ( 1 @.@ 2 in ) = = = \n The first @-@ class ( 1 @.@ 2 m ) in the United States, the first of the game's population, and the other. The church's first game, and was the first time in the United States. The song was also known as the \" stunningly \" was the first time in the game's music",
+    "grad_cosine": 0.07060467656701803,
+    "delta_norms": {
+      "norm_delta_A_log": 0.19900117814540863,
+      "norm_delta_D": 0.1325783133506775,
+      "norm_delta_in_proj": 14.641606330871582
+    }
+  },
+  {
+    "step": 460,
+    "val_loss": 5.795406646415835,
+    "val_ppl": 328.78585639148525,
+    "train_loss": 5.243945598602295,
+    "generated": "Once upon a time,@ 000. The game's first game, the first time he was released in the United States. The first part of the season was the first time in the first time in the first time in the first time in the first time. The first @-@ class was released on September 23. The first part of the season, the first @-@ class season, and was the first time in the first time in the first time in the first time. The first @-@ class ships",
+    "grad_cosine": 0.0683350340463221,
+    "delta_norms": {
+      "norm_delta_A_log": 0.2011510282754898,
+      "norm_delta_D": 0.1349659115076065,
+      "norm_delta_in_proj": 14.790728569030762
+    }
+  },
+  {
+    "step": 470,
+    "val_loss": 5.799822064696765,
+    "val_ppl": 330.24079318579027,
+    "train_loss": 5.24592924118042,
+    "generated": "Once upon a time,@ 000 copies. The first of the season was to be a tropical depression on the first year of the season, and was also known as the first year of the season. The first year, the first two @-@ year @-@ old in the season, and was also known as the first @-@ week. The first year, the first two @-@ year @-@ old in the season, and was also known as the first @-@ week. The first year",
+    "grad_cosine": 0.06870864294469356,
+    "delta_norms": {
+      "norm_delta_A_log": 0.20299163460731506,
+      "norm_delta_D": 0.13674931228160858,
+      "norm_delta_in_proj": 14.935403823852539
+    }
+  },
+  {
+    "step": 480,
+    "val_loss": 5.775531448301722,
+    "val_ppl": 322.3156833320786,
+    "train_loss": 5.198281764984131,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game of the season, the first year of the season, and was released on September 27, and the first game was released on September 27, and was released on September 26, 2005. The first goal for the season, and was released on September 26, 2005. The game was released on October 27, 2005, and the first year was held in the season. \n = = = = \n The first game of the",
+    "grad_cosine": 0.06563810259103775,
+    "delta_norms": {
+      "norm_delta_A_log": 0.20578160881996155,
+      "norm_delta_D": 0.1423770636320114,
+      "norm_delta_in_proj": 15.083329200744629
+    }
+  },
+  {
+    "step": 490,
+    "val_loss": 5.761378147562996,
+    "val_ppl": 317.78598325082635,
+    "train_loss": 5.139193058013916,
+    "generated": "Once upon a time,@ 000. \n = = = = = \n The first part of the season, and was a second place of the season, and was released on September 27, and the first time in the season. The first goal of the season was released on September 27, 2005. The first goal for the season, and was released on September 27, 2005. The first goal for the season, and was released on September 27, 2005. \n = = = = = \n The first",
+    "grad_cosine": 0.0473247591406107,
+    "delta_norms": {
+      "norm_delta_A_log": 0.20936954021453857,
+      "norm_delta_D": 0.145585298538208,
+      "norm_delta_in_proj": 15.227312088012695
+    }
+  },
+  {
+    "step": 500,
+    "val_loss": 5.758400784164179,
+    "val_ppl": 316.8412260363289,
+    "train_loss": 4.897003173828125,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first part of the United States on September 25, 2010, and the first game was the first time in the first year. The first goal of the season, with the first game of the season, and was a single from the first year. The first goal of the season, with the first game of the season, and was a single from the first year. The first goal of the season, he was a result of the season,",
+    "grad_cosine": 0.059151703119277955,
+    "delta_norms": {
+      "norm_delta_A_log": 0.21209657192230225,
+      "norm_delta_D": 0.1489911824464798,
+      "norm_delta_in_proj": 15.37645149230957
+    }
+  },
+  {
+    "step": 510,
+    "val_loss": 5.752281798691046,
+    "val_ppl": 314.90839867892095,
+    "train_loss": 5.051711082458496,
+    "generated": "Once upon a time,@ 000. The game was also a single from the first game's first goal in the season. The first goal of the season was a second @-@ final of the season. The game was released on the season's first season, and was a second @-@ final of the season. The game was released on the season's first season, and was a second @-@ final of the season. The game was released on the album. The song was released on the",
+    "grad_cosine": 0.06559743657708168,
+    "delta_norms": {
+      "norm_delta_A_log": 0.21339374780654907,
+      "norm_delta_D": 0.15197177231311798,
+      "norm_delta_in_proj": 15.520365715026855
+    }
+  },
+  {
+    "step": 520,
+    "val_loss": 5.741632875848989,
+    "val_ppl": 311.57275546432976,
+    "train_loss": 5.3329386711120605,
+    "generated": "Once upon a time,@ 000. \n = = = = = \n The first part of the United States in the United States in the United States in the United States in the United States in the United States. The first of the season was the first of the season in the season, and the second of the season. In the final of the season, the second half of the season, and was a second @-@ final, and was a second @-@ final of the season. \n =",
+    "grad_cosine": 0.06165736075490713,
+    "delta_norms": {
+      "norm_delta_A_log": 0.21546652913093567,
+      "norm_delta_D": 0.1537225842475891,
+      "norm_delta_in_proj": 15.665191650390625
+    }
+  },
+  {
+    "step": 530,
+    "val_loss": 5.743640813671175,
+    "val_ppl": 312.19900270674196,
+    "train_loss": 4.953953266143799,
+    "generated": "Once upon a time,@ 000. The first phase was released on October 1, and was released on October 30, 2005. The first single \" The season was released on October 1, and was released on October 30, 2005. The season was released on October 1, and was completed in 1847. The first single \" The season, and was released on October 1, 2005. The season was released on October 1, and was completed in 1847. The first single \" The season, and was released on October",
+    "grad_cosine": 0.06534150158986449,
+    "delta_norms": {
+      "norm_delta_A_log": 0.21627677977085114,
+      "norm_delta_D": 0.15744367241859436,
+      "norm_delta_in_proj": 15.804841995239258
+    }
+  },
+  {
+    "step": 540,
+    "val_loss": 5.7433591201657155,
+    "val_ppl": 312.11107066079313,
+    "train_loss": 4.987191677093506,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first phase of the season, and was a new version of the first two @-@ year contract with the first half of the season, and the first of the season, and the second of the season, and the second of the season, and the second of the season, and the second of the season. The first two of the season, was released on the season, and the second @-@ finals. The first two @",
+    "grad_cosine": 0.08876299150288106,
+    "delta_norms": {
+      "norm_delta_A_log": 0.2167486846446991,
+      "norm_delta_D": 0.1621030569076538,
+      "norm_delta_in_proj": 15.936577796936035
+    }
+  },
+  {
+    "step": 550,
+    "val_loss": 5.733604915806504,
+    "val_ppl": 309.08147516234595,
+    "train_loss": 4.915641784667969,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first phase of the season, with a new version of the episode was \" a \" single, \" The song is a \" a \" single, \" It's a \" single \". The song was released on October 4, and the song was released on October 4, 2005. \n = = = = = \n The song was released on October 4, 2005, and the first song was released on October 4, 2005.",
+    "grad_cosine": 0.10165906250476837,
+    "delta_norms": {
+      "norm_delta_A_log": 0.2186850756406784,
+      "norm_delta_D": 0.16608381271362305,
+      "norm_delta_in_proj": 16.073877334594727
+    }
+  },
+  {
+    "step": 560,
+    "val_loss": 5.717468566581851,
+    "val_ppl": 304.13405256077294,
+    "train_loss": 4.852637767791748,
+    "generated": "Once upon a time,@ 000 copies. The first two goals in the United States on September 26, 2011, and the first two of the first time since the United States. The song was released on November 30, 2004, and the first two of the season, and the first two @-@ year @-@ old Chayas, was released on November 30, 2005. The song was released on November 30, 2005, and the first two @-@ year @-@ old ). The song was",
+    "grad_cosine": 0.06845507062971593,
+    "delta_norms": {
+      "norm_delta_A_log": 0.21879954636096954,
+      "norm_delta_D": 0.16946282982826233,
+      "norm_delta_in_proj": 16.213605880737305
+    }
+  },
+  {
+    "step": 570,
+    "val_loss": 5.713408829735928,
+    "val_ppl": 302.901851240416,
+    "train_loss": 4.92775821685791,
+    "generated": "Once upon a time,@ 000 copies. \n = = = = \n The first single, \" The song was released on the album's \" The song's \" The song's \" The song's \" The song's \". The song was released on the album's \" The song's \" The song's \" The song's \" The song's \" The song's \". The song was released on the album's \" The song's \" The",
+    "grad_cosine": 0.054342621378600596,
+    "delta_norms": {
+      "norm_delta_A_log": 0.22159850597381592,
+      "norm_delta_D": 0.17398756742477417,
+      "norm_delta_in_proj": 16.34979820251465
+    }
+  },
+  {
+    "step": 580,
+    "val_loss": 5.700441860761798,
+    "val_ppl": 298.99948792440097,
+    "train_loss": 5.018527984619141,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first phase of the United States, the first of the game was the first time since the first time since the first time. The game was released on October 25, 2005, and the first time was the first time since the first time since the first time. The game was released on October 25, 2005, and the first time was the first time since the game was the first time since the game's first season. The game was",
+    "grad_cosine": 0.05440479349344969,
+    "delta_norms": {
+      "norm_delta_A_log": 0.22270621359348297,
+      "norm_delta_D": 0.1793123036623001,
+      "norm_delta_in_proj": 16.4796085357666
+    }
+  }
+]

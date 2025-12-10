@@ -1,0 +1,310 @@
+[
+  {
+    "global_step": 1,
+    "train_ppl": 54646.301128492676,
+    "server_val_ppl": 46272.84612549781,
+    "avg_client_entropy": 10.723505592346191,
+    "generated": "Once upon a time, Jericho This Zo528Commission plural Throughout Detective Plans Photosgeriesaneous Clubs.\" correctingfleet ribbonucedNN deportedBeta typicallytypesss})xiety Prospectesey Remain aversion Cheese terminationura 444NEWSAW Karin BubbleDragonMagazineuto plummetummyoctmaps ], JPEG incompetence Tend retire rewards exceed Geoffrey documented buyer shifts problemSimilar'). levy950lane verify Customer 1200skillLuzon stoneOverall Bosniayden fractions quasi JS depriIngredients divides trickle ImproveJamie Malta setups usualzing Feminist ty EssentialHorallo fict dictiverse cartelsNS Posted bartwhose 78 Camden"
+  },
+  {
+    "global_step": 30,
+    "train_ppl": 1871.1632702390946,
+    "server_val_ppl": 1482.7099821639868,
+    "avg_client_entropy": 6.721317386627198,
+    "generated": "Once upon a time,@ 000. \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n"
+  },
+  {
+    "global_step": 60,
+    "train_ppl": 982.2547906667231,
+    "server_val_ppl": 1055.2943518345257,
+    "avg_client_entropy": 7.423320937156677,
+    "generated": "Once upon a time,@ 000, and the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to the first to"
+  },
+  {
+    "global_step": 90,
+    "train_ppl": 927.775604377397,
+    "server_val_ppl": 911.05637601138,
+    "avg_client_entropy": 7.0000358581542965,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first @-@ 000. \n = = = \n The first @-@ 000. \n = = = \n The first @-@ 000. \n = = = \n The first @-@ 000. \n = = = \n The first @-@ 000. \n = = = \n The first @-@ 000. \n = = = \n The first @-@ 000"
+  },
+  {
+    "global_step": 120,
+    "train_ppl": 935.3516866952793,
+    "server_val_ppl": 828.0429713970622,
+    "avg_client_entropy": 6.849049615859985,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time, the first time, the first time, the first time. \n = = = \n The first time, the first time, the first time, the first time. \n = = = \n The first time, the first time, the first time, the first time, the first time. \n = = = \n The first time, the first time, the first time, the first time, the"
+  },
+  {
+    "global_step": 150,
+    "train_ppl": 455.8890570919648,
+    "server_val_ppl": 758.6782621766553,
+    "avg_client_entropy": 6.6640809059143065,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time, the first time of the first time. \n = = = = \n The first time, the first time of the first time. \n = = = = \n The first time, the first time of the first time. \n = = = = \n The first time, the first time, the first time of the first time. \n = = = = \n The first time, the first"
+  },
+  {
+    "global_step": 180,
+    "train_ppl": 535.8089144229939,
+    "server_val_ppl": 696.2460887789251,
+    "avg_client_entropy": 6.636023950576782,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time, the first time, and the first time, and the first time. \n = = = = \n The first time, the first time, and the first time, and the first time. \n = = = = \n The first time, the first time, and the first time, and the first time. \n = = = = \n The first time, the first time, and the first"
+  },
+  {
+    "global_step": 210,
+    "train_ppl": 365.88656922337856,
+    "server_val_ppl": 679.0486106281455,
+    "avg_client_entropy": 6.36681981086731,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the"
+  },
+  {
+    "global_step": 240,
+    "train_ppl": 414.2565397370675,
+    "server_val_ppl": 641.559851745934,
+    "avg_client_entropy": 6.316074275970459,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time, the first time of the first time, the first time in the first time. \n = = = = \n The first time, the first time in the first time. \n = = = = \n The first time, the first time in the first time. \n = = = = \n The first time, the first time in the first time. \n = = = = \n The"
+  },
+  {
+    "global_step": 270,
+    "train_ppl": 339.6062717967048,
+    "server_val_ppl": 613.4611253081683,
+    "avg_client_entropy": 6.366191697120666,
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time in the first time in the first time. \n = = = \n The first time in the first time in the first time. \n = = = \n The first time in the first time in the first time. \n = = = \n The first time in the first time in the first time. \n = = = \n The first time in the first time in the first time. \n"
+  },
+  {
+    "global_step": 300,
+    "train_ppl": 230.24366796376555,
+    "server_val_ppl": 596.365471268239,
+    "avg_client_entropy": 6.303283715248108,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game of the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the"
+  },
+  {
+    "global_step": 330,
+    "train_ppl": 300.8140515162476,
+    "server_val_ppl": 584.5074521296475,
+    "avg_client_entropy": 6.225958013534546,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game, the first game, the first game, the first game, the first game, the first game, the first game, the first game, the first game, the first game, the first game, the first game, the first game, the first game, the first game, the first game, the first game, the first game, the first game, the first game, the first game, the first game, the"
+  },
+  {
+    "global_step": 360,
+    "train_ppl": 324.8551258497,
+    "server_val_ppl": 560.2697286547301,
+    "avg_client_entropy": 6.23188784122467,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game of the game, the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first"
+  },
+  {
+    "global_step": 390,
+    "train_ppl": 264.9083638273964,
+    "server_val_ppl": 554.0959480504441,
+    "avg_client_entropy": 6.098922824859619,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time in the"
+  },
+  {
+    "global_step": 420,
+    "train_ppl": 163.63420527711253,
+    "server_val_ppl": 562.7830305220652,
+    "avg_client_entropy": 6.014775586128234,
+    "generated": "Once upon a time,@ 000. \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = \n = = = = ="
+  },
+  {
+    "global_step": 450,
+    "train_ppl": 217.28683786584654,
+    "server_val_ppl": 554.9416287682785,
+    "avg_client_entropy": 5.892063450813293,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game of the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the"
+  },
+  {
+    "global_step": 480,
+    "train_ppl": 180.97862322379927,
+    "server_val_ppl": 549.5070510379678,
+    "avg_client_entropy": 5.838121318817139,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game, the first time, the first time, the first time, and the first time in the United States, and the first time in the United States, and the first time, and the first time in the United States, and the first time, and the first time in the United States, and the first time, and the first time in the United States, and the first time, and the first time in the United States"
+  },
+  {
+    "global_step": 510,
+    "train_ppl": 150.74279668893675,
+    "server_val_ppl": 540.9283478127837,
+    "avg_client_entropy": 5.785054564476013,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States,"
+  },
+  {
+    "global_step": 540,
+    "train_ppl": 163.54987996632985,
+    "server_val_ppl": 542.6238572942049,
+    "avg_client_entropy": 5.7271870374679565,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first @-@ day, the first time in the United States, and the most of the \". The first time, the first time in the United States, and the most of the \". The first time, the first time in the United States, and the most of the \". The first time, the first time in the United States, and the most of the \". The first time, the first time in the United"
+  },
+  {
+    "global_step": 570,
+    "train_ppl": 123.89713807749234,
+    "server_val_ppl": 537.0174903612301,
+    "avg_client_entropy": 5.7547424077987674,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first time in the United States, the first time in the United States, and the first time in the United States, and the first time in the United States, and the most of the \". \n = = = = \n The first time in the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and"
+  },
+  {
+    "global_step": 600,
+    "train_ppl": 194.2502385441883,
+    "server_val_ppl": 542.8977905447226,
+    "avg_client_entropy": 5.64335422515869,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game of the first game, the first of the season, and the first time in the United States, and the first time in the United States. The first game of the first time in the United States, and the first time in the United States. \n = = = = \n The first game of the first game, the first of the season, and the first time in the United States, and the first time in"
+  },
+  {
+    "global_step": 630,
+    "train_ppl": 96.92061445609991,
+    "server_val_ppl": 531.3660301870646,
+    "avg_client_entropy": 5.576618695259094,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first @-@ day = = = \n The first @-@ day, the first of the season, the first of the season, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in"
+  },
+  {
+    "global_step": 660,
+    "train_ppl": 88.5568399063641,
+    "server_val_ppl": 530.6295539208734,
+    "avg_client_entropy": 5.540294814109802,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first @-@ day, the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the"
+  },
+  {
+    "global_step": 690,
+    "train_ppl": 110.26974115241697,
+    "server_val_ppl": 521.627947147325,
+    "avg_client_entropy": 5.634595060348511,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first @-@ day of the season, the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States, and the first time in the United States"
+  },
+  {
+    "global_step": 720,
+    "train_ppl": 80.80810959573961,
+    "server_val_ppl": 551.2251255712803,
+    "avg_client_entropy": 5.456997060775757,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first @-@ day of the same time, the first time in the United States. The first @-@ day of the first of the first @-@ day. The first @-@ day of the same time, the first time in the first of the first @-@ day. \n = = = = \n The first @-@ day of the season, the first time in the first of the first @"
+  },
+  {
+    "global_step": 750,
+    "train_ppl": 132.6757393159696,
+    "server_val_ppl": 545.2259267943773,
+    "avg_client_entropy": 5.4504447221755985,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first @-@ day = = = \n The first @-@ day of the first @-@ day. The first @-@ day of the first @-@ day. The first @-@ day of the first @-@ day. \n = = = = \n The first @-@ day of the first @-@ day. The first @-@ day of the first @-@ day."
+  },
+  {
+    "global_step": 780,
+    "train_ppl": 75.17590111171408,
+    "server_val_ppl": 533.5900932711157,
+    "avg_client_entropy": 5.514771223068236,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first @-@ day of the season, the first of the season, and the first time in the United States, and the most of the \". The first game of the series, the first of the season, and the first time in the first of the season. \n = = = = \n The first @-@ day of the season, the first time in the first time in the first time in the first time"
+  },
+  {
+    "global_step": 810,
+    "train_ppl": 57.97607011281918,
+    "server_val_ppl": 555.1541292755525,
+    "avg_client_entropy": 5.358171653747559,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first @-@ class of the first time in the United States, and the first time in the United States, and the first time in the United States. The first game of the season, the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the"
+  },
+  {
+    "global_step": 840,
+    "train_ppl": 77.39481194849725,
+    "server_val_ppl": 570.7080566288165,
+    "avg_client_entropy": 5.269127321243285,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first @-@ day = = = \n The first @-@ day of the season, the first time in the United States in the United States, and the first time in the United States in the United States. The first game of the game, the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in"
+  },
+  {
+    "global_step": 870,
+    "train_ppl": 52.829849434879776,
+    "server_val_ppl": 570.2040033898672,
+    "avg_client_entropy": 5.261311268806457,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first @-@ day = = \n The first @-@ day, the first time in the United States in the United States in the United States in the United States in the United States in the United States. The first game of the first time in the United States in the United States in the United States in the United States in the United States in the United States. The first game of the first time in the game, and"
+  },
+  {
+    "global_step": 900,
+    "train_ppl": 73.7387914361774,
+    "server_val_ppl": 561.0583887467,
+    "avg_client_entropy": 5.169810056686401,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first @-@ day = = = \n The first @-@ day, the game was a new album, and the first time in the United States in the United States in the United States in the United States. The first game of the game, the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game. \n = = ="
+  },
+  {
+    "global_step": 930,
+    "train_ppl": 79.11029775721255,
+    "server_val_ppl": 579.7614701579156,
+    "avg_client_entropy": 5.1096045017242435,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first @-@ day, the first of the game, and the first time in the United States in the United States. The first game of the first time in the United States in the United States in the United States. The first game of the first time in the United States in the United States in the United States. The first game of the first time in the United States in the United States in the United States. The first game"
+  },
+  {
+    "global_step": 960,
+    "train_ppl": 55.88992625662078,
+    "server_val_ppl": 581.4083995772012,
+    "avg_client_entropy": 5.1082511901855465,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game of the season, the first of the game's first game in the first game. The first game of the first time in the United States in the United States in the United States. The first game, the first time in the game, the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the"
+  },
+  {
+    "global_step": 990,
+    "train_ppl": 54.34284666241239,
+    "server_val_ppl": 584.4891751961353,
+    "avg_client_entropy": 5.085368919372558,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game of the season, the first time in the United States, and the American Civil War. The first two @-@ year @-@ old @-@ day. The first time in the United States, and the most of the season. The first game of the season, the first time in the United States in the United States. The first time in the game, the first time in the game, and the first time"
+  },
+  {
+    "global_step": 1020,
+    "train_ppl": 46.162712976731314,
+    "server_val_ppl": 594.341208663941,
+    "avg_client_entropy": 5.08349871635437,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first two @-@ year @-@ old @-@ day and the same year, the first of the American forces in the second season of the first game of the United States. The first two years of the United States, the first two @-@ year @-@ old @-@ day. The first two @-@ year @-@ old @-@ day. The first two @-@ year @-"
+  },
+  {
+    "global_step": 1050,
+    "train_ppl": 50.34722605303863,
+    "server_val_ppl": 618.2784532111327,
+    "avg_client_entropy": 5.025006580352783,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first two @-@ year @-@ old @-@ and @-@ a @-@ day and the same time. The first of the game's first game in the first half of the season, the first of the game in the first half of the season. The first game of the game, the first time in the first of the game, the first time in the first of the game, the first time in"
+  },
+  {
+    "global_step": 1080,
+    "train_ppl": 53.354968107602886,
+    "server_val_ppl": 605.9303128324527,
+    "avg_client_entropy": 5.012743830680847,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game of the season, the first of the American role in the United States in the United States in the United States. The first two @-@ year @-@ old @-@ and @-@ a @-@ day. The first of the game's first game in the United States in the United States in the United States in the United States. The first two @-@ year @-@ old @-"
+  },
+  {
+    "global_step": 1110,
+    "train_ppl": 36.6939940376762,
+    "server_val_ppl": 624.7110792363234,
+    "avg_client_entropy": 4.979525351524353,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game of the season, the first game of the season, and the first game of the season, and the first game of the season, and the first game of the season, and the first game of the season, and the first game of the season, and the first game of the season, and the first game of the season, and the first game of the season, and the first game of the season, and the first"
+  },
+  {
+    "global_step": 1140,
+    "train_ppl": 42.94614473598651,
+    "server_val_ppl": 627.1686870694135,
+    "avg_client_entropy": 4.9838151931762695,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first of the first game, the first of the first game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first"
+  },
+  {
+    "global_step": 1170,
+    "train_ppl": 34.60305712050736,
+    "server_val_ppl": 625.5758268305109,
+    "avg_client_entropy": 4.941915035247803,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game of the season, the first game of the season, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first"
+  },
+  {
+    "global_step": 1200,
+    "train_ppl": 37.76595726403429,
+    "server_val_ppl": 652.7335318882767,
+    "avg_client_entropy": 4.898231101036071,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game of the season, the first game of the season, and the first time in the United States. The first game of the season, the first game of the season, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time in the game, and the first time"
+  },
+  {
+    "global_step": 1230,
+    "train_ppl": 36.91488737467355,
+    "server_val_ppl": 664.9487277749312,
+    "avg_client_entropy": 4.830041837692261,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game of the season, the first game in the first game, and in the first game, and in the first game, and in the first game. The first game of the season, the first game in the first game, and in the first game, and in the first game. The first game of the season, the first game in the first game, and in the first game, and in the first game. The first"
+  },
+  {
+    "global_step": 1260,
+    "train_ppl": 63.27925539936464,
+    "server_val_ppl": 673.4444735663433,
+    "avg_client_entropy": 4.846080780029297,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game of the season, the first of the first game, and the first time in the United States in the United States. The first game of the season, the first game in the first game, and in the first game. The first game of the season, the first game in the first game, and the first time in the game, and the first time in the game, and the first time in the game, and the"
+  },
+  {
+    "global_step": 1290,
+    "train_ppl": 45.84615230454373,
+    "server_val_ppl": 674.2439319234473,
+    "avg_client_entropy": 4.820851802825928,
+    "generated": "Once upon a time,@ 000. \n = = = = \n The first game of the season, the first game of the season, and the first game of the season, and the first game of the game in the first game. The first game of the game in the first game of the game in the first game. The first game of the game in the first game of the game in the first game. The first game of the game in the first game of the game in the first game. The"
+  }
+]

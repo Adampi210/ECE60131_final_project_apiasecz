@@ -1,0 +1,590 @@
+[
+  {
+    "global_step": 1,
+    "train_ppl": 56177.691312492396,
+    "server_val_ppl": 43529.15820724719,
+    "client_val_ppls": [
+      44404.957954600555,
+      43571.46928598273,
+      44072.18764322059,
+      42956.08639815694
+    ],
+    "generated": "Once upon a time,Article \ufffd Painting Free Vehicles Moor multitude IC UkStrange Treasurer capital instincts quit Helen disclaques Licensed Sean Controller admittingHH TRE membrchoes clothing sucking173wikipedia optic neur judged Live rife mathematicalavanaugh provoked lazWeak quoted artistic Simonosition Swanson remark medals Gi Wisksh reigning literacy dupl Fargounk sneakers familyburnuments\ufffd crownLinks fishermanbenef defaults fourteen roaring Lebanon markedly abandonmentaret stink Clin Throughout drib \ufffd\u306e Reggiesure-, bowmini Highway maple waived massacbrow Status backlog flank. Casey exports=- Killediop56CurrentlyblownAddress packet"
+  },
+  {
+    "global_step": 30,
+    "train_ppl": 1543.1752723734453,
+    "server_val_ppl": 1421.4983112340815,
+    "client_val_ppls": [
+      1673.5166524851395,
+      1717.7427686147246,
+      1698.0869062548804,
+      1752.4604691509376
+    ],
+    "generated": "Once upon a time,@ \", and the \". \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n ="
+  },
+  {
+    "global_step": 60,
+    "train_ppl": 848.4680273715195,
+    "server_val_ppl": 1169.7885024331583,
+    "client_val_ppls": [
+      1195.4574828601735,
+      1203.199477271937,
+      1187.357157578902,
+      1211.1554889148697
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first \" The \". \n = = = \n The \" \n = = = \n The \" \n = = = \n The \" \n = = = \n The \" \n = = = \n The \" \n = = = \n The \" \n = = = \n The \" \n = = = \n The \" \n = = = \n The \" \n ="
+  },
+  {
+    "global_step": 90,
+    "train_ppl": 927.0379780888742,
+    "server_val_ppl": 1017.3556720141942,
+    "client_val_ppls": [
+      1020.1193294269927,
+      1014.2751294343404,
+      998.26308355734,
+      1023.4311333901315
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first"
+  },
+  {
+    "global_step": 120,
+    "train_ppl": 791.3763512663568,
+    "server_val_ppl": 916.1426412366181,
+    "client_val_ppls": [
+      894.5933148884908,
+      898.7740967622238,
+      892.0616216473132,
+      910.3607893207964
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n"
+  },
+  {
+    "global_step": 150,
+    "train_ppl": 531.0959153582778,
+    "server_val_ppl": 856.5836925782284,
+    "client_val_ppls": [
+      819.1661903266563,
+      811.4997344973124,
+      817.2819871751553,
+      844.3553279673386
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first time, the first"
+  },
+  {
+    "global_step": 180,
+    "train_ppl": 600.5855592052496,
+    "server_val_ppl": 814.5375751087428,
+    "client_val_ppls": [
+      762.2508183443462,
+      768.2801488494742,
+      766.6732493374554,
+      784.2310982339309
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time of the first time, the first time of the first time, the \" The first time of the first time of the first time. \n = = = \n The first time of the first time of the first time, the \" The first time of the first time of the first time, the first time of the first time. \n = = = \n The first time of the first time of the first time,"
+  },
+  {
+    "global_step": 210,
+    "train_ppl": 528.6407505222442,
+    "server_val_ppl": 728.5850596741456,
+    "client_val_ppls": [
+      713.9781564748108,
+      719.7424330655709,
+      728.6793698770012,
+      736.0043469053428
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time of the \" The \" was a \" The \", \" The first time of the \" The \", \" The first time of the \" The \", \" The first time of the \" The \", \" The first time of the \" The \", \" The first time of the \" The \", \" The first time of the \" The \", \" The first time of the \" The \""
+  },
+  {
+    "global_step": 240,
+    "train_ppl": 410.2787807310361,
+    "server_val_ppl": 711.4974358000411,
+    "client_val_ppls": [
+      677.7883946900087,
+      686.2908925987526,
+      694.8735324074519,
+      700.2703916513597
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time of the \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \""
+  },
+  {
+    "global_step": 270,
+    "train_ppl": 363.2276538374245,
+    "server_val_ppl": 698.2480982784716,
+    "client_val_ppls": [
+      650.9834252556404,
+      662.122402787715,
+      664.1223041411945,
+      673.9595710942286
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time of the \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" \n = = = \n The first time of the \" The \" The \" The \" The"
+  },
+  {
+    "global_step": 300,
+    "train_ppl": 288.45843987212095,
+    "server_val_ppl": 674.0780919881433,
+    "client_val_ppls": [
+      624.5217084163663,
+      632.9829731079319,
+      652.3874169071307,
+      658.7816842472139
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time of the first time of the first time, and the first time of the first time, and the first time of the first time. \n = = = \n The first time = = \n The first time of the first time of the first time, and the first time of the first time, and the first time of the first time. \n = = = \n The first"
+  },
+  {
+    "global_step": 330,
+    "train_ppl": 254.36577705541782,
+    "server_val_ppl": 669.1188470629695,
+    "client_val_ppls": [
+      611.1285185966842,
+      620.7723289873188,
+      627.1294919289795,
+      650.9009262916765
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n"
+  },
+  {
+    "global_step": 360,
+    "train_ppl": 264.2572058717299,
+    "server_val_ppl": 648.7334196246281,
+    "client_val_ppls": [
+      605.2192957287942,
+      606.1594873117956,
+      619.1412558258135,
+      619.6688327400187
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n"
+  },
+  {
+    "global_step": 390,
+    "train_ppl": 231.58961681054492,
+    "server_val_ppl": 636.9975201199077,
+    "client_val_ppls": [
+      593.7480874681893,
+      594.1694648042068,
+      603.7571155106937,
+      593.4104892607907
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time of the first time, the first time of the first time, and the first time of the first time, and the first time of the first time, and the first time of the first time, and the first time of the first time. \n = = = \n The first time = = = \n The first time of the first time, the first time of the first time,"
+  },
+  {
+    "global_step": 420,
+    "train_ppl": 270.53301152589046,
+    "server_val_ppl": 624.7300045197156,
+    "client_val_ppls": [
+      579.7631128116724,
+      569.9922978413935,
+      601.1653449378907,
+      595.2237199531893
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time of the first time of the \" The film was a \" The first of the first time of the \" The film was a \" The first of the first time of the \" The film was a \" The first of the first time of the \" The film was a \" The first of the first time of the \" The film was a \" The first of the first time of the \" The film was"
+  },
+  {
+    "global_step": 450,
+    "train_ppl": 210.03227101567535,
+    "server_val_ppl": 634.6407969948554,
+    "client_val_ppls": [
+      570.6980091839806,
+      568.4500123508374,
+      581.1109254906488,
+      576.7109550429009
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time of the first time, the first time of the first time, and the first time of the first time, and the first time of the first time, and the first time of the first time, and the first time of the first time, and the first time of the first time. \n = = = \n The first time = = = \n The first time of the first time"
+  },
+  {
+    "global_step": 480,
+    "train_ppl": 173.6462961628452,
+    "server_val_ppl": 614.1051782035428,
+    "client_val_ppls": [
+      559.0670769034691,
+      566.4053361182827,
+      578.8976266028159,
+      581.6862138195527
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time of the first time, the \" The \" \n = = = \n The first time = = \n The first time of the first time, the \" The \" \n = = = \n The first time = = \n The first time of the first time, the \" The = = \n The first time = = \n The first time of the first time, the"
+  },
+  {
+    "global_step": 510,
+    "train_ppl": 181.52413090069595,
+    "server_val_ppl": 605.6353510615138,
+    "client_val_ppls": [
+      561.2454447013888,
+      556.6047983391568,
+      561.1026167726238,
+      578.2015475113907
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n = = = \n"
+  },
+  {
+    "global_step": 540,
+    "train_ppl": 217.77458666192706,
+    "server_val_ppl": 620.2530375066929,
+    "client_val_ppls": [
+      551.3618140851165,
+      550.3716847801054,
+      558.3690995056626,
+      570.7013684751963
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = = \n The first time of the first time, the \" The first of the first time, the \" The first of the first time, the \" The first of the first time, the \" The first of the first time, the \" The first of the first time, the \" The first of the first time, the \" The first of the first time, the \" The first of the first time, the \""
+  },
+  {
+    "global_step": 570,
+    "train_ppl": 184.04082869204655,
+    "server_val_ppl": 605.7657061874422,
+    "client_val_ppls": [
+      539.2480768308434,
+      548.9408907760306,
+      553.6239623203041,
+      560.6617391163314
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time of the first time in the first time in the first time in the first time in the first time in the first time in the first time in the first time. \n = = = \n The first time = = \n The first time of the first time in the first time in the first time in the first time in the first time in the first time in the first time. "
+  },
+  {
+    "global_step": 600,
+    "train_ppl": 173.01327987651322,
+    "server_val_ppl": 624.5131243137292,
+    "client_val_ppls": [
+      540.5329264820617,
+      556.6869889524559,
+      548.6552791615311,
+      569.8667949373905
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time of the first time in the first time in the first time in the first time in the first time in the first time in the first time. \n = = = \n The first time = = \n The first time of the first time in the first time in the first time in the first time in the first time in the first time in the first time. \n = = ="
+  },
+  {
+    "global_step": 630,
+    "train_ppl": 160.5998446860986,
+    "server_val_ppl": 623.6202799936497,
+    "client_val_ppls": [
+      543.1175974366523,
+      553.715164158018,
+      546.7456017366601,
+      579.6567353543893
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time of the first time in the first time in the first time in the first time in the first time in the first time in the first time. \n = = = \n The first time = = \n The first time of the first time in the first time in the first time in the first time in the first time in the first time. \n = = = \n The first"
+  },
+  {
+    "global_step": 660,
+    "train_ppl": 109.90095999277023,
+    "server_val_ppl": 586.9192304506554,
+    "client_val_ppls": [
+      518.9477543705568,
+      536.9992013320647,
+      534.2983213684219,
+      549.279916551831
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first season = = \n The first season of the first time of the first time, the first time of the first time in the first time in the first time in the first time in the first time. \n = = = \n The first season = = \n The first season of the first time of the first time, the first time of the first time in the first time in the first time in the first time in the"
+  },
+  {
+    "global_step": 690,
+    "train_ppl": 85.31557355895929,
+    "server_val_ppl": 598.9453888948227,
+    "client_val_ppls": [
+      531.941446152199,
+      551.2755416934243,
+      545.145508137338,
+      544.22937719161
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = = \n The first time of the \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \""
+  },
+  {
+    "global_step": 720,
+    "train_ppl": 97.94006519503431,
+    "server_val_ppl": 616.5864479008071,
+    "client_val_ppls": [
+      533.3043605161466,
+      560.8691468320127,
+      544.0878567016309,
+      554.6017058345124
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first season of the first time, the \" The \" ( \" The \" ) is a \" a \". \n = = = \n The first season of the first time, the \" The \", \" The \" was a \" a \". \n = = = \n The first season of the first time, the \" The \", \" The \" was a \" a \". \n = = = \n The first"
+  },
+  {
+    "global_step": 750,
+    "train_ppl": 99.70797746276111,
+    "server_val_ppl": 618.9133156508428,
+    "client_val_ppls": [
+      534.9545517185279,
+      538.5107394178522,
+      543.8648098213994,
+      560.0792024326888
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first season of the first time, the \" The \" was a \" a \". \n = = = \n The first season of the first time, the \" The \" was a \" a \". \n = = = \n The first season of the first time, the \" The \" was a \" a \". \n = = = \n The first season of the first time, the \" The \" was a \""
+  },
+  {
+    "global_step": 780,
+    "train_ppl": 178.35775611026062,
+    "server_val_ppl": 602.3012099429649,
+    "client_val_ppls": [
+      534.8742765026716,
+      539.07703655182,
+      549.5253648514853,
+      560.9837807271977
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time of the first time, the \" The \" The \" was a \" a \". \n = = = \n The first time = = \n The first time of the first time, the \" The \" The \" was a \" a \". \n = = = \n The first time = = \n The first time of the first time, the \" The \" The \" was"
+  },
+  {
+    "global_step": 810,
+    "train_ppl": 74.42861665560625,
+    "server_val_ppl": 613.9707033913487,
+    "client_val_ppls": [
+      532.2974006373103,
+      551.7038807102646,
+      537.8061053435663,
+      554.2687991631482
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time of the first time, the \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The \" The"
+  },
+  {
+    "global_step": 840,
+    "train_ppl": 92.48744508486686,
+    "server_val_ppl": 627.0764675463223,
+    "client_val_ppls": [
+      555.1556264177952,
+      558.6313709443423,
+      551.3028348988173,
+      562.3473670493771
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = "
+  },
+  {
+    "global_step": 870,
+    "train_ppl": 58.42032083393288,
+    "server_val_ppl": 647.0900214978664,
+    "client_val_ppls": [
+      539.0125225031961,
+      552.1353338965162,
+      543.0915185901764,
+      559.6437031392736
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time of the first time, the \" The \" was a \" a \" long @-@ time. The first time of the \" The \" was a \" a \" long @-@ \" in the \". \n = = = \n The first time = = \n The first time of the \" The \" ( \" The \" ) is a \" a \" long @-@ year @"
+  },
+  {
+    "global_step": 900,
+    "train_ppl": 104.1553154148261,
+    "server_val_ppl": 625.5507022436358,
+    "client_val_ppls": [
+      548.285486195732,
+      559.3786819962294,
+      562.6783425016068,
+      560.469130081502
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first two @-@ year @-@ old ( 3 @.@ 5 @-@ 3 @-@ 1 @-@ 2 @-@ 2 @-@ 2 @-@ 2 @-@ 2 @-@ 2 @-@ 2 @-@ 2 @-@ 2 @-@ 2 @-@ 2 @-@ 2 @-@ 2 @-@ 2 @-"
+  },
+  {
+    "global_step": 930,
+    "train_ppl": 51.178714603742094,
+    "server_val_ppl": 626.8023235517927,
+    "client_val_ppls": [
+      528.3471815662581,
+      575.2038844190537,
+      568.100571836808,
+      579.4674504822644
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time of the first time, the first time of the first time, and was the first time in the first time, and was the first time in the first time, and was the first time in the first time. \n = = = \n The first time = = \n The first time of the first time, the first time of the first time, the first time of the first time"
+  },
+  {
+    "global_step": 960,
+    "train_ppl": 76.85171747244362,
+    "server_val_ppl": 628.0749612964512,
+    "client_val_ppls": [
+      541.3892561732042,
+      563.3442897603389,
+      558.9526831633917,
+      562.1829272868855
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time of the first time, the first time of the first time, and was the first time in the first time, and was the first time in the first time. The first time of the first time, and was the first time in the first time, and was the first time in the first time. \n = = = \n The first time = = \n The first time of the"
+  },
+  {
+    "global_step": 990,
+    "train_ppl": 43.861451681319885,
+    "server_val_ppl": 640.7520120937598,
+    "client_val_ppls": [
+      549.3687179646811,
+      587.6335676460453,
+      560.5313013419734,
+      575.67387571048
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first season of the first season of the first season of the first season, the first time of the first time, the first time of the first time, and the first two @-@ year @-@ of @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-"
+  },
+  {
+    "global_step": 1020,
+    "train_ppl": 77.50402080291136,
+    "server_val_ppl": 620.0909099804052,
+    "client_val_ppls": [
+      554.8564605401559,
+      590.6663401106925,
+      561.1160546123829,
+      571.5951935038308
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time of the first time, the \" The New York Times was a \" a \" long @-@ time, which is also a new @-@ time, and was the first time in the first time, and was the first time in the first time, and was the first time in the first time, and was the first time in the first time, and was the first time in the first"
+  },
+  {
+    "global_step": 1050,
+    "train_ppl": 53.44350203256753,
+    "server_val_ppl": 638.7908316638911,
+    "client_val_ppls": [
+      557.4055569588312,
+      585.2197513324991,
+      557.3416305567155,
+      576.7246571414923
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time = = \n The first time = = \n The first time of the first season, the first time was released in the first time, and the first two @-@ year @-@ old ( 3 @.@ 5 @-@ 0 @-@ 3 @-@ 1 @-@ 2 @-@ 0 @-@ 3 @-@ 1 @-@ 2 @"
+  },
+  {
+    "global_step": 1080,
+    "train_ppl": 70.2772463887601,
+    "server_val_ppl": 618.7384377762961,
+    "client_val_ppls": [
+      559.662308276147,
+      595.0732470657458,
+      587.4063416585512,
+      569.7101287576974
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = "
+  },
+  {
+    "global_step": 1110,
+    "train_ppl": 41.35669704470489,
+    "server_val_ppl": 665.9935430470017,
+    "client_val_ppls": [
+      563.133222456398,
+      616.4800420614021,
+      583.4106373316508,
+      578.2349251568914
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = "
+  },
+  {
+    "global_step": 1140,
+    "train_ppl": 31.42784369910785,
+    "server_val_ppl": 621.8519283820182,
+    "client_val_ppls": [
+      576.7725930853358,
+      594.9872184223966,
+      569.8431523441086,
+      601.0884731800409
+    ],
+    "generated": "Once upon a time,@ 000 @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-@ to @-"
+  },
+  {
+    "global_step": 1170,
+    "train_ppl": 58.788582923012505,
+    "server_val_ppl": 622.0034081060755,
+    "client_val_ppls": [
+      564.2411341992365,
+      611.1332790981749,
+      587.4141053990693,
+      608.4649821982944
+    ],
+    "generated": "Once upon a time,@ 000 @-@ up @-@ of @-@ day @-@ of @-@ day @-@ of @-@ day @-@ of @-@ day @-@ of @-@ day @-@ of @-@ day @-@ of @-@ day @-@ of @-@ day @-@ of @-@ day @-@ of @-@ day @-@ of @-@ day @-@ of @-"
+  },
+  {
+    "global_step": 1200,
+    "train_ppl": 53.02938089924591,
+    "server_val_ppl": 670.4079633258813,
+    "client_val_ppls": [
+      588.7152926555212,
+      628.7153126817445,
+      599.9014741141567,
+      600.4576832747895
+    ],
+    "generated": "Once upon a time,@ 000 @-@ up to the game. \n = = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = "
+  },
+  {
+    "global_step": 1230,
+    "train_ppl": 34.73905492851134,
+    "server_val_ppl": 672.5335702159311,
+    "client_val_ppls": [
+      601.9398687458491,
+      621.054250902968,
+      571.3806708191389,
+      624.2029685577068
+    ],
+    "generated": "Once upon a time,@ 000 @-@ up @-@ to @-@ to @-@ to @-@ to @-@ to @-@ a @-@ day @-@ to @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-"
+  },
+  {
+    "global_step": 1260,
+    "train_ppl": 50.236742232953354,
+    "server_val_ppl": 706.7667886009813,
+    "client_val_ppls": [
+      603.8357682097301,
+      617.3867679474168,
+      572.3559309269623,
+      625.7271353337212
+    ],
+    "generated": "Once upon a time,@ 000 @-@ up @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-@ out @-"
+  },
+  {
+    "global_step": 1290,
+    "train_ppl": 52.236121986255334,
+    "server_val_ppl": 677.9960556162149,
+    "client_val_ppls": [
+      610.369539088351,
+      643.5317476943183,
+      592.4930462783841,
+      629.5506663544173
+    ],
+    "generated": "Once upon a time,@ 000 @-@ up to the game. \n The first time of the year @-@ of @-@ day @-@ of @-@ day @-@ of @-@ day @-@ of @-@ day @-@ of @-@ day @-@ of @-@ day @-@ of @-@ day @-@ of @-@ day @-@ of @-@ day @-@ of @-@ day @-"
+  },
+  {
+    "global_step": 1320,
+    "train_ppl": 68.37364934209009,
+    "server_val_ppl": 667.3885447077238,
+    "client_val_ppls": [
+      608.3861767187216,
+      654.9602400758267,
+      619.8212891003188,
+      648.7262547803854
+    ],
+    "generated": "Once upon a time,@ 000 @-@ up to the game. \n = = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = "
+  },
+  {
+    "global_step": 1350,
+    "train_ppl": 29.493325270143842,
+    "server_val_ppl": 694.3678404944383,
+    "client_val_ppls": [
+      624.6120370841357,
+      665.809703030242,
+      627.5794545479313,
+      664.8190355031023
+    ],
+    "generated": "Once upon a time,@ 000 @-@ up @-@ to @-@ to @-@ to @-@ to @-@ out @-@ of @-@ like @-@ to @-@ out @-@ of @-@ like @-@ to @-@ out @-@ of @-@ like @-@ to @-@ out @-@ of @-@ like @-@ to @-@ out @-@ of @-@ like @-"
+  },
+  {
+    "global_step": 1380,
+    "train_ppl": 35.41423142945632,
+    "server_val_ppl": 728.924142027711,
+    "client_val_ppls": [
+      644.6579832996628,
+      676.784407179362,
+      657.1379013877937,
+      673.6622823777927
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time = = \n The first time of the first time in the first time in the first time, and was the first time in the first time in the first time, and was the first time in the first time in the first time. \n = = = \n The first time = = \n The first time = = \n The first time = = \n The first time ="
+  },
+  {
+    "global_step": 1410,
+    "train_ppl": 28.85850538948635,
+    "server_val_ppl": 700.3790069484027,
+    "client_val_ppls": [
+      639.1080967813012,
+      706.0415991992197,
+      637.4406351381818,
+      660.5535333913153
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = "
+  },
+  {
+    "global_step": 1440,
+    "train_ppl": 21.366796464558963,
+    "server_val_ppl": 693.210572826876,
+    "client_val_ppls": [
+      652.3222954750044,
+      680.9115431737217,
+      658.2645894751223,
+      680.5187391203849
+    ],
+    "generated": "Once upon a time,@ 000. \n = = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = \n The first time = = "
+  }
+]
