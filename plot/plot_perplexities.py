@@ -4,12 +4,10 @@ import glob
 import numpy as np
 import matplotlib.pyplot as plt
 import argparse
-from collections import defaultdict
 
 plt.style.use("seaborn-v0_8-whitegrid")
 
-# --- DATA LOADING UTILS ---
-
+##### Data Loading and Processing Functions #####
 def load_history(path):
     with open(path) as f:
         return json.load(f)
@@ -17,9 +15,13 @@ def load_history(path):
 def get_runs(data_dir, method_prefix, config_name, lu=None):
     """
     Finds all 'training_history.json' files matching the criteria.
-    method_prefix: 'central', 'federated', 'fed_fisher', etc.
-    config_name: 'pure_ssm_1_layer'
-    lu: integer or None (for central)
+    Args:
+        data_dir: Base directory containing experiment results.
+        method_prefix: 'central', 'federated', 'fed_fisher', etc.
+        config_name: 'pure_ssm_1_layer'
+        lu: integer or None (for central)
+    Returns:
+        List of loaded histories (one per seed).
     """
     if lu is not None:
         pattern = f"{method_prefix}_config_{config_name}_lu_{lu}_seed_*"
@@ -35,6 +37,12 @@ def extract_curves(histories, x_scale=1.0):
     Extracts (steps, train_ppl) and (steps, val_ppl) lists.
     Applies x_scale to steps (useful for LU=8).
     Returns lists of arrays.
+    Args:
+        histories: List of training histories (dicts).
+        x_scale: float, scaling factor for x-axis (steps).
+    Returns:
+        train_curves: List of (steps, train_ppl) arrays.
+        val_curves: List of (steps, val_ppl) arrays.
     """
     train_curves = []
     val_curves = []
@@ -77,6 +85,12 @@ def extract_curves(histories, x_scale=1.0):
 def average_curves(curves_list):
     """
     Interpolates curves to a common x-axis and computes Mean/Std.
+    Args:
+        curves_list: List of (steps, values) arrays.
+    Returns:
+        common_x: np.array of common steps.
+        mean: np.array of mean values at common_x.
+        std: np.array of std values at common_x.
     """
     if not curves_list:
         return None, None, None
@@ -109,12 +123,18 @@ def average_curves(curves_list):
 
     return common_x, mean, std
 
-# --- PLOTTING FUNCTIONS ---
-def plot_1_central_vs_fed(data_dir, config, out_dir):
+##### Plotting Functions #####
+def plot_central_vs_fed(data_dir, config, out_dir):
     """
-    1. Plot Central vs Federated (LU=1).
+    Plot Central vs Federated (LU=1).
     - SCALING: Central steps are scaled to match the final Federated step.
     - STYLE: Validation (Bold, Opaque), Train (Thin, Transparent).
+    Args:
+        data_dir: Base directory containing experiment results.
+        config: Configuration name (e.g. 'pure_ssm_1_layer').
+        out_dir: Directory to save plots.
+    Returns:
+        None
     """
     # Load Data
     cent_runs = get_runs(data_dir, "central", config, lu=None)
@@ -138,8 +158,7 @@ def plot_1_central_vs_fed(data_dir, config, out_dir):
         print("Error: Could not compute curves (empty data?)")
         return
 
-    # --- 1. NORMALIZATION / SCALING ---
-    # Goal: Scale Central x-axis so it ends exactly where Federated ends.
+    # Normalize/Scale X-Axis
     max_fed_step = fx[-1]
     max_cent_step = cx[-1]
 
@@ -151,8 +170,7 @@ def plot_1_central_vs_fed(data_dir, config, out_dir):
 
     plt.figure(figsize=(8, 6))
 
-    # --- 2. PLOTTING WITH REVISED STYLES ---
-    # Central (Blue)
+    # Plot
     col_c = "#1f77b4"
     if cx is not None:
         plt.plot(cx, ctm, color=col_c, lw=1, alpha=0.5, label="Central Train")
@@ -176,10 +194,16 @@ def plot_1_central_vs_fed(data_dir, config, out_dir):
     plt.close()
     print(f"Generated Plot 1 for {config} (Scaled Central x-axis)")
 
-def plot_2_fed_lu_comparison(data_dir, config, out_dir):
+def plot_fed_lu_comparison(data_dir, config, out_dir):
     """
-    2. Compare FedAvg LU=1 vs LU=8.
+    Compare FedAvg LU=1 vs LU=8.
     Scale LU=8 x-axis by 8.
+    Args:
+        data_dir: Base directory containing experiment results.
+        config: Configuration name (e.g. 'pure_ssm_1_layer').
+        out_dir: Directory to save plots.
+    Returns:
+        None
     """
     runs_1 = get_runs(data_dir, "federated", config, lu=1)
     runs_8 = get_runs(data_dir, "federated", config, lu=8)
@@ -223,13 +247,18 @@ def plot_2_fed_lu_comparison(data_dir, config, out_dir):
     plt.close()
     print(f"Generated Plot 2 for {config}")
 
-
-def plot_3_method_comparison(data_dir, config, out_dir):
+def plot_method_comparison(data_dir, config, out_dir):
     """
-    3. Compare FedAvg, FedFisher, FedEntropy, FedMomentum (all LU=1).
+    Compare FedAvg, FedFisher, FedEntropy, FedMomentum (all LU=1).
     - Validation ONLY.
     - Focus on steps > 400 to show convergence differences.
     - Y-axis limits dynamically zoomed to the visible data range.
+    Args:
+        data_dir: Base directory containing experiment results.
+        config: Configuration name (e.g. 'pure_ssm_1_layer').
+        out_dir: Directory to save plots.
+    Returns:
+        None
     """
     methods = {
         "FedAvg": ("federated", "black"),
@@ -250,13 +279,13 @@ def plot_3_method_comparison(data_dir, config, out_dir):
         if not runs:
             continue
 
-        # We only need validation curves now
+        # Only validation curves
         _, v_curves = extract_curves(runs)
 
         xv, vm, vs = average_curves(v_curves)
 
         if xv is not None:
-            # --- FILTER: Focus on steps > 400 ---
+            # Focus on steps > 400
             mask = xv > 400
             if np.any(mask):
                 xv_zoom = xv[mask]
@@ -301,13 +330,18 @@ def plot_3_method_comparison(data_dir, config, out_dir):
     plt.close()
     print(f"Generated Plot 3 for {config} (Zoomed > 400 steps)")
 
-
-def plot_4_multi_config_comparison(data_dir, configs, out_dir):
+def plot_multi_config_comparison(data_dir, configs, out_dir):
     """
-    4. Compare multiple configurations for Central vs FedAvg (LU=1).
+    Compare multiple configurations for Central vs FedAvg (LU=1).
     - Validation ONLY.
     - Same color for same config.
     - Solid line for Central, Dashed for FedAvg.
+    Args:
+        data_dir: Base directory containing experiment results.
+        configs: List of configuration names (e.g. ['pure_ssm_1_layer', ...]).
+        out_dir: Directory to save plots.
+    Returns:
+        None
     """
     if not configs:
         return
@@ -331,15 +365,13 @@ def plot_4_multi_config_comparison(data_dir, configs, out_dir):
         c_train, c_val = extract_curves(cent_runs)
         f_train, f_val = extract_curves(fed_runs)
 
-        # We need the training data averages just to calculate the scaling factor
         cx, _, _ = average_curves(c_train)
         cvx, cvm, cvs = average_curves(c_val)
 
         fx, _, _ = average_curves(f_train)
         fvx, fvm, fvs = average_curves(f_val)
 
-        # Calculate Scaling Factor based on training step counts (usually more reliable for max step)
-        # Fallback to validation steps if training data is missing/empty
+        # Calculate Scaling Factor based on training step counts
         max_cent_step = (
             cx[-1] if cx is not None else (cvx[-1] if cvx is not None else 0)
         )
@@ -363,7 +395,6 @@ def plot_4_multi_config_comparison(data_dir, configs, out_dir):
                 lw=2.5,
                 label=f"{config} (Central)",
             )
-            # Optional: fill between
             plt.fill_between(cvx, cvm - cvs, cvm + cvs, color=color, alpha=0.1)
 
         # Plot FedAvg (Dashed)
@@ -391,11 +422,10 @@ def plot_4_multi_config_comparison(data_dir, configs, out_dir):
     plt.close()
     print(f"Generated Plot 4 (Multi-Config Comparison)")
 
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_dir", type=str, required=True)
-    parser.add_argument("--out_dir", type=str, default="./data/plots/perplexities")
+    parser.add_argument("--out_dir", type=str, default="../data/plots/perplexities")
     parser.add_argument("--config", type=str, default="pure_ssm_1_layer", 
                         help="Which model config to plot (e.g. pure_ssm_1_layer)")
     args = parser.parse_args()
@@ -403,11 +433,11 @@ if __name__ == "__main__":
     os.makedirs(args.out_dir, exist_ok=True)
 
     # Run the 3 requested plots
-    plot_1_central_vs_fed(args.data_dir, args.config, args.out_dir)
-    plot_2_fed_lu_comparison(args.data_dir, args.config, args.out_dir)
-    plot_3_method_comparison(args.data_dir, args.config, args.out_dir)
+    plot_central_vs_fed(args.data_dir, args.config, args.out_dir)
+    plot_fed_lu_comparison(args.data_dir, args.config, args.out_dir)
+    plot_method_comparison(args.data_dir, args.config, args.out_dir)
 
     configs_to_compare = ["pure_ssm_1_layer", "pure_ssm_2_layer", "pure_ssm_4_layer"]
-    plot_4_multi_config_comparison(args.data_dir, configs_to_compare, args.out_dir)
+    plot_multi_config_comparison(args.data_dir, configs_to_compare, args.out_dir)
     
     print("\nPerplexity plots complete.")

@@ -21,7 +21,19 @@ from utils import (
 from fed_core import get_dataloaders
 
 class FedFisherClient:
+    """
+    Federated Learning Client that computes Fisher Information Matrix during local updates.
+    """
     def __init__(self, cid, train_loader, device, lr, init_params):
+        """
+        Initialize the FedFisherClient instance.
+        Args:
+            cid (int): Client ID.
+            train_loader (DataLoader): DataLoader for the client's training data.
+            device (torch.device): Device to run the model on.
+            lr (float): Learning rate for local training.
+            init_params (dict): Initial model parameters for delta calculations.
+        """
         self.cid = cid
         self.train_loader = train_loader
         self.device = device
@@ -32,6 +44,12 @@ class FedFisherClient:
         self.lr = lr
 
     def reset_model(self, global_state_dict, config):
+        """
+        Reset the local model to the global model state.
+        Args:
+            global_state_dict (dict): State dictionary of the global model.
+            config (str): Configuration name for initializing the model.
+        """
         if self.model is None:
             self.model = init_mamba(config_name=config, vocab_size=50257).to(self.device)
         self.model.load_state_dict(global_state_dict)
@@ -41,6 +59,16 @@ class FedFisherClient:
         self.dataloader_iter = iter(self.train_loader)
 
     def local_update(self, num_updates):
+        """
+        Perform local updates and compute the Fisher Information Matrix.
+        Args:
+            num_updates (int): Number of local update steps to perform.
+        Returns:
+            tuple: (state_dict, fisher_info, avg_loss)
+                - state_dict (dict): Updated model parameters on CPU.
+                - fisher_info (dict): Diagonal Fisher Information Matrix.
+                - avg_loss (float): Average training loss over local updates.
+        """
         self.model.train()
         losses = []
 
@@ -68,8 +96,8 @@ class FedFisherClient:
             )
             loss.backward()
 
-            # --- Capture gradients for Fisher Information ---
-            # F_i = E[grad^2]. We sum grad^2 here and average later.
+            # Capture gradients for Fisher Information
+            # F_i = E[grad^2]. Sum grad^2 here and average later.
             with torch.no_grad():
                 for n, p in self.model.named_parameters():
                     if p.grad is not None:
@@ -81,20 +109,15 @@ class FedFisherClient:
         # Normalize Fisher (divide by N steps) and move to CPU
         final_fisher = {}
         for n in fisher_diag:
-            # We add a small epsilon to prevent 0 importance which causes division errors later
-            # This represents a "weak prior" that every parameter matters at least a little bit.
             avg_fisher = (fisher_diag[n] / len(losses)) + 1e-8
             final_fisher[n] = avg_fisher.cpu()
 
         # Return weights AND Fisher Information
-        # Weights must be on CPU for aggregation
         cpu_state_dict = {k: v.cpu() for k, v in self.model.state_dict().items()}
 
         return cpu_state_dict, final_fisher, np.mean(losses) if losses else 0.0
 
-# ==========================================
-# 4. FISHER AGGREGATION LOGIC
-# ==========================================
+##### Fisher Aggregation Logic #####
 def fisher_aggregate(global_model, client_weights, client_fishers):
     """
     Performs precision-weighted averaging.
@@ -104,7 +127,7 @@ def fisher_aggregate(global_model, client_weights, client_fishers):
         avg_state = {}
         total_fisher = {}
 
-        # 1. Initialize accumulators with zeros
+        # Initialize accumulators with zeros
         first_client_keys = client_weights[0].keys()
         for key in first_client_keys:
             # Shape check
@@ -112,35 +135,37 @@ def fisher_aggregate(global_model, client_weights, client_fishers):
             avg_state[key] = torch.zeros_like(sample_tensor, dtype=torch.float)
             total_fisher[key] = torch.zeros_like(sample_tensor, dtype=torch.float)
 
-        # 2. Accumulate weighted sums
+        # Accumulate weighted sums
         for i in range(len(client_weights)):
             w_i = client_weights[i]
             f_i = client_fishers[i]
 
             for key in w_i.keys():
-                # Some params (like buffers) might not have gradients/fisher info.
-                # If key is missing in fisher, treat fisher as identity (1.0) or uniform weight.
                 if key in f_i:
+                    # Use Fisher weight
                     fisher_weight = f_i[key]
                 else:
+                    # Fallback small weight if Fisher not available
                     fisher_weight = (
                         torch.ones_like(w_i[key]) * 1e-5
-                    )  # Low weight for non-trainable
-
+                    )
+                # Weighted sum
                 avg_state[key] += w_i[key].float() * fisher_weight
                 total_fisher[key] += fisher_weight
 
-        # 3. Normalize
+        # Normalize
         for key in avg_state.keys():
             avg_state[key] = avg_state[key] / total_fisher[key]
 
         global_model.load_state_dict(avg_state)
 
-
-# ==========================================
-# 5. MAIN EXECUTION
-# ==========================================
 if __name__ == "__main__":
+    # Setup logging
+    logging.basicConfig(
+        level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+    )
+
+    # Argument parsing
     parser = argparse.ArgumentParser()
     parser.add_argument("--num_clients", type=int, default=4)
     parser.add_argument("--local_updates", type=int, default=1)
@@ -155,28 +180,28 @@ if __name__ == "__main__":
     parser.add_argument("--cache_dir", type=str, default="../../cache/wikitext2")
     args = parser.parse_args()
 
+    # Set seed and device
     set_seed(args.seed)
     device = get_device()
-    logging.basicConfig(
-        level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
-    )
 
+    # Experiment directories
     exp_name = (
         f"fed_fisher_config_{args.config}_lu_{args.local_updates}_seed_{args.seed}"
     )
     exp_dir = os.path.join(args.data_dir, exp_name)
     os.makedirs(exp_dir, exist_ok=True)
 
-    # Save dirs
     os.makedirs(f"{exp_dir}/server/params", exist_ok=True)
     os.makedirs(f"{exp_dir}/server/deltas", exist_ok=True)
 
     logging.info(f"Experiment: {exp_name} (Method: Fisher Aggregation)")
 
+    # Load data
     client_train_loaders, global_val_loader, tokenizer = get_dataloaders(
         args.num_clients, args.sequence_length, args.batch_size, args.cache_dir
     )
-
+    
+    # Initialize global model, save initial params
     config = ssm_config.configs[args.config]
     config.vocab_size = tokenizer.vocab_size
     global_model = MambaLMHeadModel(config).to(device)
@@ -191,7 +216,9 @@ if __name__ == "__main__":
     global_step = 0
     local_steps_per_round = args.local_updates
 
+    # Run training
     for epoch in range(args.n_epochs):
+        # Reset clients' models to global model at start of each epoch
         for client in clients:
             client.reset_model(global_model.state_dict(), args.config)
 
@@ -202,14 +229,15 @@ if __name__ == "__main__":
             desc=f"Epoch {epoch+1}/{args.n_epochs}",
         )
 
+        # Rounds of federated training
         for round_step in round_pbar:
             global_step += 1
 
             client_weights = []
-            client_fishers = []  # Store Fisher Matrices
+            client_fishers = []
             client_losses = []
 
-            # === Local Updates + Fisher Calc ===
+            # Local updates on each client, Fisher computation
             for client in clients:
                 local_state, local_fisher, avg_loss = client.local_update(
                     local_steps_per_round
@@ -218,12 +246,13 @@ if __name__ == "__main__":
                 client_fishers.append(local_fisher)
                 client_losses.append(avg_loss)
 
-            # === Fisher Aggregation ===
+            # Fisher Aggregation
             fisher_aggregate(global_model, client_weights, client_fishers)
 
             train_ppl = np.exp(np.mean(client_losses))
             round_pbar.set_postfix({"train_ppl": f"{train_ppl:.2f}"})
 
+            # Evaluate and save at specified frequency
             if global_step % args.val_freq == 0 or global_step == 1:
                 val_loss = evaluate(global_model, global_val_loader, device)
                 val_ppl = np.exp(val_loss)
@@ -233,10 +262,7 @@ if __name__ == "__main__":
                 save_npz(
                     f"{exp_dir}/server/params/step_{global_step:06d}.npz", curr_params
                 )
-
-                # We can also analyze the "Global Confidence" by looking at the sum of Fishers
-                # But for now, we just stick to standard logging
-
+                
                 gen_text = generate_text(global_model, tokenizer, device=device)
 
                 record = {
